@@ -24,7 +24,7 @@
             <section class="hero">
                 <div class="hero-content">
                         <h1>Ibrahim Salman</h1>
-                        <h3>I'm a <span class="text"></span></h3>
+                        <h3>I'm a  <span class="text"></span></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat ex
                              vel iaculis semper. Sed ut purus in enim blandit vehicula porttitor ac libero. 
                              Morbi condimentum risus arcu, nec gravida lorem vehicula eu. Sed egestas, nunc et 
@@ -49,11 +49,27 @@
                              Morbi condimentum risus arcu, nec gravida lorem vehicula eu.</p>
 
                              <div class="tab-titles">
-                                <p class="tab-links active-link">Skills</p>
-                                <p class="tab-links">Experience</p>
-                                <p class="tab-links">Education</p>
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
                              </div>
-                             <div class="tab-contents">
+                             <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Software Dev</span><br>Multipe languanges like C++, Python, Java</li>
+                                    <li><span>Web Dev</span><br>Multipe languanges like HTML, CSS, JavaScript, Bootstap</li>
+                                    <li><span>ML/AI</span><br>Multipe languanges like C++, Python, Java</li>
+                                
+                                </ul>
+                             </div>
+                             <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>Software Dev</span><br>Multipe languanges like C++, Python, Java</li>
+                                    <li><span>Web Dev</span><br>Multipe languanges like HTML, CSS, JavaScript, Bootstap</li>
+                                    <li><span>ML/AI</span><br>Multipe languanges like C++, Python, Java</li>
+                                
+                                </ul>
+                             </div>
+                             <div class="tab-contents" id="education">
                                 <ul>
                                     <li><span>Software Dev</span><br>Multipe languanges like C++, Python, Java</li>
                                     <li><span>Web Dev</span><br>Multipe languanges like HTML, CSS, JavaScript, Bootstap</li>
