@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Salman</title>
+    <link rel="stylesheet" href="prototype.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <header class="header"> <a href="#" class="logo">Ibrahim.</a>
+        <nav class="navbar"> <a href="#" style="--i-1" class="active">Home</a> <a href="#" style="--i:2">About</a> <a
+                href="#" style="--i-3">Projects</a> <a href="#" style="--i-4">Blah Blah</a> <a href="#"
+                style="--i-5">Contact</a> </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ibrahim Salman</h1>
+            <h3>I'm a <span class="text"></span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat ex vel iaculis semper. Sed ut
+                purus in enim blandit vehicula porttitor ac libero. Morbi condimentum risus arcu, nec gravida lorem
+                vehicula eu. Sed egestas, nunc et euismod fermentum, tellus erat mattis felis, et tempor nunc lectus
+                vitae erat. </p>
+            <div class="btn-box"> <a href="#">Know Me</a> <a href="#">Let's Talk</a> </div>
+        </div>
+        <div class="hero-code">
+            <pre><code> const aboutMe = { codename: "Ibrahim Salman", role: "Computer Scient Student", stack: { languages: ["Python", "Java", "C++", "JavaScript"], frameworks: ["Bootstrap", "React", "Angular"], }, traits: [ "Problem Solver", "Pixel Perfectionist", "Dark Mode Advocate" ], missionStatement: "Turning ideas into reality", availability: "HIRE ME!!", }; </code></pre>
+            <div class="widget">
+                <p>Currently Working on something Awesome!</p>
+            </div>
+        </div>
+    </section> <!---------------About Me-------------->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"> <img src="me.jpg"> </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat ex vel iaculis semper. Sed
+                        ut purus in enim blandit vehicula porttitor ac libero. Morbi condimentum risus arcu, nec gravida
+                        lorem vehicula eu.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Software Dev</span> – C++, Python, Java</li>
+                            <li><span>Web Dev</span> – HTML, CSS, JavaScript, Bootstrap</li>
+                            <li><span>ML/AI</span> – Python, TensorFlow, scikit-learn</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Internship</span> – Worked on web apps</li>
+                            <li><span>Hackathons</span> – Built ML projects</li>
+                            <li><span>Freelance</span> – Web development gigs</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelor’s</span> – Computer Science (TRU)</li>
+                            <li><span>Certifications</span> – Web Dev, Python, Java</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div> </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="prototype.js"></script>
+</body>
+
+</html>
