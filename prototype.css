@@ -380,7 +380,16 @@ body {
     width: 100%;
 }
 
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
 
+.contact-left p{
+    margin-top: 10px;
+}
 
 @keyframes slideRight {
     0% {
