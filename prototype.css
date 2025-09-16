@@ -32,6 +32,14 @@ body {
     animation: slideRight 1s ease forwards;
 }
 
+/* Hamburger button */
+.menu-btn {
+  display: none; /* hidden by default */
+  font-size: 30px;
+  color: #ededed;
+  cursor: pointer;
+}
+
 .navbar a {
     font-size: 18px;
     color: #ededed;
@@ -49,6 +57,32 @@ body {
     color: #00afb0;
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* show hamburger on small screens */
+  }
+
+  .navbar {
+    display: none; /* hide menu by default */
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    background: #222;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .navbar.active {
+    display: flex; /* show menu when toggled */
+  }
+
+  .navbar a {
+    margin: 15px 0;
+  }
+}
 .hero {
     position: relative;
     height: 100vh;
