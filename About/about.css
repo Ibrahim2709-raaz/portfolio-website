@@ -1,11 +1,11 @@
-.{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif ;
+    font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     background: #081b29;
     color: #ededed;
 }
@@ -22,31 +22,152 @@ body{
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 25px;
-    text-decoration: none;
     color: #ededed;
-    cursor: default;
+    text-decoration: none;
     font-weight: 600;
+    cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 
-.nav-bar a{
-    font-size: 18px;
-    margin-left: 35px;
-    text-decoration: none;
-    font-weight: 500;
-    color: #ededed;
-    
-    transition: .3s;
-    animation: slideTop 0.75s ease forwards;
+/* Hamburger button */
+.menu-btn {
+  display: none; /* hidden by default */
+  font-size: 30px;
+  color: #ededed;
+  cursor: pointer;
 }
 
-.nav-bar a:hover, 
-.nav-bar a.active{
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
     color: #00afb0;
 }
+
+
+/* Main container */
+.about-me {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Section spacing */
+.about-me section {
+  margin-bottom: 3rem;
+}
+
+/* Headings */
+h1, h2 {
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-left: 4px solid #00afb0;
+  padding-left: 0.6rem;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.intro-text {
+  flex: 2;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.intro-image {
+  flex: 1;
+  text-align: center;
+}
+
+.intro-image img {
+  max-width: 200px;
+  border-radius: 50%;
+  border: 4px solid #00afb0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Quick Facts */
+.quick-facts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.quick-facts li {
+  background: #fff;
+  margin: 0.5rem 0;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Contact CTA */
+.contact-cta {
+  text-align: center;
+  padding: 2rem;
+  background: #003366;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.contact-cta .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background: #00afb0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.contact-cta .btn:hover {
+  background: #008b8b;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-image img {
+    max-width: 150px;
+  }
+}
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
@@ -57,4 +178,68 @@ body{
         transform: translateX(0px);
         opacity: 1;
     }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* show hamburger on small screens */
+  }
+
+  .navbar {
+    display: none; /* hide menu by default */
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    background: #222;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .navbar.active {
+    display: flex; /* show menu when toggled */
+  }
+
+  .navbar a {
+    margin: 15px 0;
+  }
 }
