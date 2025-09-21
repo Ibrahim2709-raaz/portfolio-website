@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
+.app{
+    width: 100%;
+    min-height: 100vh;}
 body {
     background: #081b29;
     color: #ededed;
@@ -85,10 +87,11 @@ body {
 }
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 15%;
+    padding: 0 5%;
+    overflow: hidden;
     justify-content: space-between;
     gap: 150px;
 }
@@ -100,6 +103,7 @@ body {
 
 .hero-code {
     flex: 1;
+    width: 100%;
     background: #1e1e2e;
     padding: 14px 18px;
     border-radius: 10px;
@@ -124,16 +128,20 @@ body {
 
 .widget {
     position: absolute;
-    bottom: -20px;
     right: 20px;
-    background: rgba(40, 40, 60, 0.95);
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 12.5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: -50px 5px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     animation: fadeUp 0.6s ease-out;
+}
+
+#widget-text{
+    color: #ededed;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 @keyframes fadeUp {

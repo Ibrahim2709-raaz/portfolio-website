@@ -16,142 +16,158 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" class="logo">Ibrahim.</a>
-        <!-- Hamburger button -->
-        <div class="menu-btn" id="menu-btn">
-            ☰
-        </div>
-        <nav class="navbar" id="navbar">
-            <a href="prototype.html" style="--i:1;" class="active">Home</a>
-            <a href="About/about.html" style="--i:2;">About</a>
-            <a href="Projects/projects.html" style="--i:3;">Projects</a>
-            <a href="#" style="--i:4;">Blah Blah</a>
-            <a href="Contact/contact.html" style="--i:5;">Contact</a>
-        </nav>
-    </header>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Ibrahim Salman</h1>
-            <h3>I'm a <span class="text"></span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat ex vel iaculis semper. Sed ut
-                purus in enim blandit vehicula porttitor ac libero. Morbi condimentum risus arcu, nec gravida lorem
-                vehicula eu. Sed egestas, nunc et euismod fermentum, tellus erat mattis felis, et tempor nunc lectus
-                vitae erat. </p>
-            <div class="btn-box"> <a href="#">Know Me</a> <a href="#">Let's Talk</a> </div>
-        </div>
-        <div class="hero-code">
-            <pre><code> const aboutMe = { codename: "Ibrahim Salman", role: "Computer Scient Student", stack: { languages: ["Python", "Java", "C++", "JavaScript"], frameworks: ["Bootstrap", "React", "Angular"], }, traits: [ "Problem Solver", "Pixel Perfectionist", "Dark Mode Advocate" ], missionStatement: "Turning ideas into reality", availability: "HIRE ME!!", }; </code></pre>
-            <div class="widget">
-                <p>Currently Working on something Awesome!</p>
+    <div class="app">
+        <header class="header">
+            <a href="#" class="logo">Ibrahim.</a>
+            <!-- Hamburger button -->
+            <div class="menu-btn" id="menu-btn">
+                ☰
             </div>
-        </div>
-    </section> <!---------------About Me-------------->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1"> <img src="images/me.jpg"> </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat ex vel iaculis semper. Sed
-                        ut purus in enim blandit vehicula porttitor ac libero. Morbi condimentum risus arcu, nec gravida
-                        lorem vehicula eu.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Software Dev</span> – C++, Python, Java</li>
-                            <li><span>Web Dev</span> – HTML, CSS, JavaScript, Bootstrap</li>
-                            <li><span>ML/AI</span> – Python, TensorFlow, scikit-learn</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Internship</span> – Worked on web apps</li>
-                            <li><span>Hackathons</span> – Built ML projects</li>
-                            <li><span>Freelance</span> – Web development gigs</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Bachelor’s</span> – Computer Science (TRU)</li>
-                            <li><span>Certifications</span> – Web Dev, Python, Java</li>
-                        </ul>
-                    </div>
-                </div>
+            <nav class="navbar" id="navbar">
+                <a href="prototype.html" style="--i:1;" class="active">Home</a>
+                <a href="About/about.html" style="--i:2;">About</a>
+                <a href="Projects/projects.html" style="--i:3;">Projects</a>
+                <a href="#" style="--i:4;">Blah Blah</a>
+                <a href="Contact/contact.html" style="--i:5;">Contact</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Ibrahim Salman</h1>
+                <h3>I'm a <span class="text"></span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat ex vel iaculis semper. Sed ut
+                    purus in enim blandit vehicula porttitor ac libero. Morbi condimentum risus arcu, nec gravida lorem
+                    vehicula eu. Sed egestas, nunc et euismod fermentum, tellus erat mattis felis, et tempor nunc lectus
+                    vitae erat. </p>
+                <div class="btn-box"> <a href="#">Know Me</a> <a href="#">Let's Talk</a> </div>
             </div>
-        </div>
-    </section>
-    <section id="projects">
-        <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-        </div>
-        <div class="project-list">
-            <div class="project">
-                <img src="images/me.jpg">
-                <div class="layer">
-                    <h3>Software Projects</h3>
-                    <p>Inventory Management System (C++)</p>
-                    <p>Banking System Simulator (Java)</p>
-                    <p>Sudoku Solver (Python)</p>
-                    <div class="btn-box"> <a href="#">See More</a></div>
-                </div>
+            <div class="hero-code">
+                <pre><code> const aboutMe = { 
+                codename: "Ibrahim Salman", 
+                role: "Computer Scient Student", 
+                stack: { 
+                    languages: ["Python", "Java", "C++", "JavaScript"], 
+                    frameworks: ["Bootstrap", "React", "Angular"], 
+                }, 
+                traits: [ "Problem Solver", "Pixel Perfectionist", "Dark Mode Advocate" ], 
+                missionStatement: "Turning ideas into reality", 
+                availability: "HIRE ME!!",
+             }; 
+                <div class="widget">
+                <p id="widget-text">Currently Working on something Awesome!</p>
             </div>
-            <div class="project">
-                <img src="images/me.jpg">
-                <div class="layer">
-                    <h3>Web Projects</h3>
-                    <p>Portfolio Website</p>
-                    <p>E-Commerce Storefront</p>
-                    <p>Blog Platform</p>
-                    <div class="btn-box"> <a href="#">See More</a></div>
-                </div>
+            </code></pre>
+
             </div>
-            <div class="project">
-                <img src="images/me.jpg">
-                <div class="layer">
-                    <h3>AI Projects</h3>
-                    <p>Image Classifier (CNN, PyTorch)</p>
-                    <p>Banking System Simulator (Java)</p>
-                    <p>Sentiment Analysis Tool</p>
-                    <div class="btn-box"> <a href="#">See More</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="btn-container">
-            <a href="Projects/projects.html" class="btn">See All</a>
-        </div>
-    </section>
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane">ibrahim.salman2700@gmail.com</i></p>
-                    <p>+1 250 572 3028</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </section> <!---------------About Me-------------->
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1"> <img src="images/me.jpg"> </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat ex vel iaculis semper.
+                            Sed
+                            ut purus in enim blandit vehicula porttitor ac libero. Morbi condimentum risus arcu, nec
+                            gravida
+                            lorem vehicula eu.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Software Dev</span> – C++, Python, Java</li>
+                                <li><span>Web Dev</span> – HTML, CSS, JavaScript, Bootstrap</li>
+                                <li><span>ML/AI</span> – Python, TensorFlow, scikit-learn</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Internship</span> – Worked on web apps</li>
+                                <li><span>Hackathons</span> – Built ML projects</li>
+                                <li><span>Freelance</span> – Web development gigs</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Bachelor’s</span> – Computer Science (TRU)</li>
+                                <li><span>Certifications</span> – Web Dev, Python, Java</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+            </div>
+            <div class="project-list">
+                <div class="project">
+                    <img src="images/me.jpg">
+                    <div class="layer">
+                        <h3>Software Projects</h3>
+                        <p>Inventory Management System (C++)</p>
+                        <p>Banking System Simulator (Java)</p>
+                        <p>Sudoku Solver (Python)</p>
+                        <div class="btn-box"> <a href="#">See More</a></div>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/me.jpg">
+                    <div class="layer">
+                        <h3>Web Projects</h3>
+                        <p>Portfolio Website</p>
+                        <p>E-Commerce Storefront</p>
+                        <p>Blog Platform</p>
+                        <div class="btn-box"> <a href="#">See More</a></div>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/me.jpg">
+                    <div class="layer">
+                        <h3>AI Projects</h3>
+                        <p>Image Classifier (CNN, PyTorch)</p>
+                        <p>Banking System Simulator (Java)</p>
+                        <p>Sentiment Analysis Tool</p>
+                        <div class="btn-box"> <a href="#">See More</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <a href="Projects/projects.html" class="btn">See All</a>
+            </div>
+        </section>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane">ibrahim.salman2700@gmail.com</i></p>
+                        <p>+1 250 572 3028</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+        <footer class="bg-dark text-light text-center py-3">
+            <p class="mb-0">© 2025 Ibrahim Salman | All Rights Reserved</p>
+        </footer>
     </div>
-    <footer class="bg-dark text-light text-center py-3">
-        <p class="mb-0">© 2025 Ibrahim Salman | All Rights Reserved</p>
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
     <script src="prototype.js"></script>
