@@ -19,3 +19,11 @@ function opentab(tabname)
     event.currentTarget.classList.add("active-link"); 
     document.getElementById(tabname).classList.add("active-tab"); 
 }
+
+const menuBtn = document.querySelector('.menu-btn');
+const sideNav = document.querySelector('.side-nav');
+
+menuBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  sideNav.style.display = sideNav.style.display === "flex" ? "none" : "flex";
+});

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Example</title>
+  <style>
+    /* ===== Basic Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #1f1f1f;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .main-nav {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-item .nav-link {
+      text-decoration: none;
+      color: #1f1f1f;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-item .nav-link:hover {
+      color: #0ea5a4;
+    }
+
+    .menu-btn {
+      display: none; /* hidden on desktop */
+    }
+
+    /* ===== Sidebar Menu (Mobile) ===== */
+    .side-nav {
+      position: fixed;
+      top: 0;
+      right: -250px; /* hidden off screen */
+      width: 250px;
+      height: 100%;
+      background: white;
+      box-shadow: -2px 0 6px rgba(0, 0, 0, 0.15);
+      list-style: none;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transition: right 0.3s ease;
+      z-index: 999;
+    }
+
+    .side-nav.active {
+      right: 0; /* slide in */
+    }
+
+    .side-nav .nav-link {
+      color: #1f1f1f;
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .side-nav .nav-link:hover {
+      color: #0ea5a4;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none; /* hide desktop nav */
+      }
+      .menu-btn {
+        display: block; /* show hamburger */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="logo" href="#">Ibrahim.</a>
+    <div class="nav-links">
+      <!-- Normal navigation (desktop) -->
+      <ul class="main-nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blah Blah</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger (only on mobile) -->
+      <a class="nav-link menu-btn" href="javascript:void(0);">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f">
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Sidebar menu (hidden by default) -->
+  <ul class="side-nav">
+    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Blah Blah</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+  </ul>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const sideNav = document.querySelector('.side-nav');
+
+    // Toggle side nav
+    menuBtn.addEventListener('click', () => {
+      sideNav.classList.toggle('active');
+    });
+
+    // Close side nav when clicking a link
+    sideNav.addEventListener('click', (e) => {
+      if (e.target.classList.contains('nav-link')) {
+        sideNav.classList.remove('active');
+      }
+    });
+
+    // Close when pressing Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") {
+        sideNav.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

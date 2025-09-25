@@ -31,23 +31,95 @@ body{
   min-height: 100vh;
 }
 
-.navbar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 5%;
-  background: var(--nav-bg);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid var(--card-border);
-}
+/* ===== Navbar ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--nav-bg);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.hero{
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .main-nav {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-item .nav-link {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-item .nav-link:hover {
+      color: var(--accent-color);
+    }
+
+    .menu-btn {
+      display: none; /* hidden on desktop */
+    }
+
+    /* ===== Sidebar Menu (Mobile) ===== */
+    .side-nav {
+      position: fixed;
+      top: 0;
+      right: -250px; /* hidden off screen */
+      width: 250px;
+      height: 100%;
+      background: var(--nav-bg);
+      box-shadow: -2px 0 6px rgba(0, 0, 0, 0.15);
+      list-style: none;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transition: right 0.3s ease;
+      z-index: 999;
+    }
+
+    .side-nav.active {
+      right: 0; /* slide in */
+    }
+
+    .side-nav .nav-link {
+      color: var(--text-color);
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .side-nav .nav-link:hover {
+      color: var(--accent-color);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none; /* hide desktop nav */
+      }
+      .menu-btn {
+        display: block; /* show hamburger */
+      }
+    }
+  .hero{
   min-height:100vh;
   background: linear-gradient(135deg,#7c3aed 0%, #db2777 100%);
 
