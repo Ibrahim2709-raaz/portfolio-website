@@ -37,29 +37,47 @@ body{
       justify-content: space-between;
       align-items: center;
       background: var(--nav-bg);
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      position: sticky;
+      backdrop-filter: blur(10px);
+      padding: 1.5rem 5%;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid var(--card-border);
+      position: fixed;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
     }
 
     .logo {
       font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--primary-color);
+      font-weight: 700;
+      color: var(--accent-color);
+      text-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
       text-decoration: none;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
+      gap: 2rem;
+      
     }
 
+    .nav-links li a { 
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      /*transition: slideBottom 0.3s ease forward;*/
+    }
+
+ 
     .main-nav {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
+      align-items: center;
     }
 
     .nav-item .nav-link {
@@ -92,7 +110,7 @@ body{
       flex-direction: column;
       gap: 1.25rem;
       transition: right 0.3s ease;
-      z-index: 999;
+      z-index: 1001;
     }
 
     .side-nav.active {
@@ -122,8 +140,23 @@ body{
   .hero{
   min-height:100vh;
   background: linear-gradient(135deg,#7c3aed 0%, #db2777 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+  overflow: hidden;
 
+}
 
+.hero-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1400px;
+  width: 100%;
+  padding-top: 100px;
+  padding-right: 50px;
 }
 /* Hero Code Box */
 .hero-code {
@@ -165,11 +198,6 @@ body{
   animation: fadeUp 0.6s ease-out;
 }
 
-/* Animations */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 /* About Tabs */
 #about ul li span {
@@ -182,4 +210,54 @@ body{
   font-size: 48px;
   font-weight: 600;
   color: #ededed;
+}
+
+
+/* Animations */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,62 +19,64 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 
   <!-- Custom CSS -->
-   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="style.css">
 
   <!-- Typed.js -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
+
 <body>
-<div class="app">
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a class="logo" href="#">Ibrahim.</a>
-    <div class="nav-links">
-      <!-- Normal navigation (desktop) -->
-      <ul class="main-nav">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Blah Blah</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-      </ul>
+  <div class="app">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a class="logo" href="#">Ibrahim.</a>
+      <div class="nav-links">
+        <!-- Normal navigation (desktop) -->
+        <ul class="main-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blah Blah</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
 
-      <!-- Hamburger (only on mobile) -->
-      <a class="nav-link menu-btn" href="javascript:void(0);">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f">
-          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
-        </svg>
-      </a>
-    </div>
-  </nav>
-
-  <!-- Sidebar menu (hidden by default) -->
-  <ul class="side-nav">
-    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Blah Blah</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-  </ul>
-
-
-
-  <!-- Hero -->
-  <div class="hero">
-  <div class="hero container-fluid d-flex align-items-center py-5">
-    <div class="row w-100 align-items-center">
-      <div class="col-lg-6 hero-content">
-        <h1 class="display-4 fw-bold">Ibrahim Salman</h1>
-        <h3 class="text-info fw-bold">I'm a <span class="text"></span></h3>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat ex vel iaculis semper...</p>
-        <div class="d-flex gap-3">
-          <a href="#" class="btn btn-info text-dark fw-semibold">Know Me</a>
-          <a href="#" class="btn btn-outline-info fw-semibold">Let's Talk</a>
-        </div>
+        <!-- Hamburger (only on mobile) -->
+        <a class="nav-link menu-btn" href="javascript:void(0);">
+          <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+        </a>
       </div>
-      <div class="col-lg-6 hero-code mt-4 mt-lg-0 position-relative">
-<pre><code class="language-javascript">
+    </nav>
+
+    <!-- Sidebar menu (hidden by default) -->
+    <ul class="side-nav">
+      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Blah Blah</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+
+
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-container">
+      
+          <div class="col-lg-6 hero-content">
+            <h1 class="display-4 fw-bold">Ibrahim Salman</h1>
+            <h3 class="text-info fw-bold">I'm a <span class="text"></span></h3>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat ex vel iaculis
+              semper...</p>
+            <div class="d-flex gap-3">
+              <a href="#" class="btn btn-info text-dark fw-semibold">Know Me</a>
+              <a href="#" class="btn btn-outline-info fw-semibold">Let's Talk</a>
+            </div>
+          </div>
+          <div class="col-lg-6 hero-code mt-4 mt-lg-0 position-relative">
+            <pre><code class="language-javascript">
 const aboutMe = {
     codename: "Ibrahim Salman",
     role: "Computer Science Student",
@@ -90,70 +93,72 @@ const aboutMe = {
     availability: "HIRE ME!!",
 };
 </code></pre>
-        <div class="widget">
-          <p>Currently Working on something Awesome!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <!-- About -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-5 mb-4 mb-md-0">
-          <img src="me.jpg" class="img-fluid rounded">
-        </div>
-        <div class="col-md-7">
-          <h1 class="sub-title">About Me</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-
-          <!-- Tabs -->
-          <ul class="nav nav-tabs" id="aboutTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button">Skills</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" type="button">Experience</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button">Education</button>
-            </li>
-          </ul>
-
-          <div class="tab-content mt-3">
-            <div class="tab-pane fade show active" id="skills">
-              <ul>
-                <li><span>Software Dev</span> – C++, Python, Java</li>
-                <li><span>Web Dev</span> – HTML, CSS, JavaScript, Bootstrap</li>
-                <li><span>ML/AI</span> – Python, TensorFlow, scikit-learn</li>
-              </ul>
-            </div>
-            <div class="tab-pane fade" id="experience">
-              <ul>
-                <li><span>Internship</span> – Worked on web apps</li>
-                <li><span>Hackathons</span> – Built ML projects</li>
-                <li><span>Freelance</span> – Web development gigs</li>
-              </ul>
-            </div>
-            <div class="tab-pane fade" id="education">
-              <ul>
-                <li><span>Bachelor’s</span> – Computer Science (TRU)</li>
-                <li><span>Certifications</span> – Web Dev, Python, Java</li>
-              </ul>
+            <div class="widget">
+              <p>Currently Working on something Awesome!</p>
             </div>
           </div>
-
-        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-light text-center py-3">
-    <p class="mb-0">© 2025 Ibrahim Salman | All Rights Reserved</p>
-  </footer>
+    <!-- About -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-4 mb-md-0">
+            <img src="me.jpg" class="img-fluid rounded">
+          </div>
+          <div class="col-md-7">
+            <h1 class="sub-title">About Me</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs" id="aboutTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills"
+                  type="button">Skills</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience"
+                  type="button">Experience</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education"
+                  type="button">Education</button>
+              </li>
+            </ul>
+
+            <div class="tab-content mt-3">
+              <div class="tab-pane fade show active" id="skills">
+                <ul>
+                  <li><span>Software Dev</span> – C++, Python, Java</li>
+                  <li><span>Web Dev</span> – HTML, CSS, JavaScript, Bootstrap</li>
+                  <li><span>ML/AI</span> – Python, TensorFlow, scikit-learn</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="experience">
+                <ul>
+                  <li><span>Internship</span> – Worked on web apps</li>
+                  <li><span>Hackathons</span> – Built ML projects</li>
+                  <li><span>Freelance</span> – Web development gigs</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="education">
+                <ul>
+                  <li><span>Bachelor’s</span> – Computer Science (TRU)</li>
+                  <li><span>Certifications</span> – Web Dev, Python, Java</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+      <p class="mb-0">© 2025 Ibrahim Salman | All Rights Reserved</p>
+    </footer>
   </div> <!-- End of app div -->
 
   <!-- Prism.js -->
@@ -166,4 +171,5 @@ const aboutMe = {
   <!-- Custom JS -->
   <script src="main.js"></script>
 </body>
+
 </html>
