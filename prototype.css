@@ -4,12 +4,33 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-.app{
+
+:root {
+    /* Base Colors */
+    --text-color: #f1f5f9;       /* Light text */
+    --background: #0f172a;       /* Deep navy background */
+    --section-bg: #1e293b;       /* Dark slate section */
+    --card-bg: #1e293b;          /* Card background */
+    --nav-bg: rgba(15, 23, 42, 0.9); /* Transparent dark nav */
+
+    /* Accent Colors */
+    --accent-color: #00bcd4;     /* Teal accent */
+    --accent-hover: #06d6a0;     /* Lighter green-teal on hover */
+    --card-border: rgba(148, 163, 184, 0.15);
+
+    /* Gradient */
+    --gradient-start: #0f172a;   /* Dark navy */
+    --gradient-end: #1e293b;     /* Slate */
+}
+
+.app {
     width: 100%;
-    min-height: 100vh;}
+    min-height: 100vh;
+}
+
 body {
-    background: #081b29;
-    color: #ededed;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: var(--text-color);
 }
 
 .header {
@@ -22,13 +43,14 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background: var(--nav-bg);
 }
 
 .logo {
-    font-size: 25px;
-    color: #ededed;
+    font-size: 30px;
+    color: var(--text-color);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
@@ -36,15 +58,15 @@ body {
 
 /* Hamburger button */
 .menu-btn {
-  display: none; /* hidden by default */
-  font-size: 30px;
-  color: #ededed;
-  cursor: pointer;
+    display: none;
+    font-size: 30px;
+    color: var(--text-color);
+    cursor: pointer;
 }
 
 .navbar a {
     font-size: 18px;
-    color: #ededed;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -56,58 +78,59 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    color: #00afb0;
+    color: var(--accent-color);
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .menu-btn {
-    display: block; /* show hamburger on small screens */
-  }
+    .menu-btn {
+        display: block;
+    }
 
-  .navbar {
-    display: none; /* hide menu by default */
-    position: absolute;
-    top: 70px;
-    right: 10%;
-    background: #222;
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 10%;
+        background: var(--nav-bg);
+        flex-direction: column;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 15px 0;
+    }
+}
+
+.side-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1500;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.3);
     flex-direction: column;
-    width: 200px;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  .navbar.active {
-    display: flex; /* show menu when toggled */
-  }
-
-  .navbar a {
-    margin: 15px 0;
-  }
-}
-.side-nav{
-  display: none; /* Hidden by default */
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 1500;
-  background-color: var(--nav-bg);
-  backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.3);
-  flex-direction: column;
-  align-items: flex-start;
-  
+    align-items: flex-start;
 }
 
-.side-nav li{
-  width: 100%;
+.side-nav li {
+    width: 100%;
 }
 
-.side-nav li a{
-  width: 100%;
+.side-nav li a {
+    width: 100%;
 }
+
 .hero {
     position: relative;
     min-height: 100vh;
@@ -124,9 +147,8 @@ body {
     max-width: 800px;
 }
 
+/* Hero Code Box */
 .hero-code {
-    flex: 1;
-    width: 100%;
     background: #1e1e2e;
     padding: 14px 18px;
     border-radius: 10px;
@@ -137,6 +159,7 @@ body {
     overflow-x: auto;
     text-align: left;
     white-space: pre-wrap;
+    position: relative;
 }
 
 .hero-code pre,
@@ -149,30 +172,11 @@ body {
     white-space: pre-wrap;
 }
 
-.widget {
-    position: absolute;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: -50px 5px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    animation: fadeUp 0.6s ease-out;
-}
-
-#widget-text{
-    color: #ededed;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
 @keyframes fadeUp {
     from {
         opacity: 0;
         transform: translateY(15px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -188,20 +192,20 @@ body {
 .hero-content h3 {
     font-size: 32px;
     font-weight: 700;
-    color: #00afb0;
+    color: var(--text-color);
     animation: slideBottom 1s ease forwards;
     animation-delay: 1.5s;
     opacity: 0;
 }
 
 .hero-content h3 :nth-of-type(2) {
-    margin-bottom: 30ox;
+    margin-bottom: 30px;
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
 }
 
 .hero-content h3 span {
-    color: #ededed;
+    color: var(--accent-color);
 }
 
 .hero-content p {
@@ -226,8 +230,8 @@ body {
     align-items: center;
     width: 150px;
     height: 100%;
-    background: #00afb0;
-    border: 2px solid #00afb0;
+    background: var(--text-color);
+    border: 2px solid var(--accent-color);
     border-radius: 8px;
     font-size: 18px;
     color: black;
@@ -239,12 +243,12 @@ body {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2.5s;
-    box-shadow: 0 0 5px #00afb0, 0 0 #00afb0;
+    box-shadow: 0 0 10px var(--accent-color);
 }
 
 .btn-box a:nth-child(2) {
     background: transparent;
-    color: #00afb0;
+    color: var(--text-color);
 }
 
 .btn-box a::before {
@@ -254,7 +258,8 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background: #ededed;
+    background: var(--accent-color);
+    color: var(--text-color);
     z-index: -1;
     transition: .5s;
 }
@@ -263,11 +268,16 @@ body {
     width: 100%;
 }
 
-
+.btn-box a:nth-child(2)::before {
+    background: transparent;
+}
+.btn-box a:nth-child(2):hover {
+    color: var(--accent-color);
+}
 
 #about {
     padding: 80px;
-    color: #ededed;
+    color: var(--text-color);
 }
 
 .row {
@@ -292,7 +302,7 @@ body {
 .sub-title {
     font-size: 60px;
     font-weight: 600;
-    color: #ededed;
+    color: var(--accent-color);
 }
 
 .tab-titles {
@@ -312,7 +322,7 @@ body {
     content: '';
     width: 0;
     height: 3px;
-    background: #00afb0;
+    background: var(--accent-color);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -330,7 +340,7 @@ body {
 
 .tab-contents ul li span {
     font-size: 16px;
-    color: #00afb0;
+    color: var(--accent-color);
 }
 
 .tab-contents {
@@ -368,7 +378,7 @@ body {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #00afb0);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--accent-color));
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -397,21 +407,19 @@ body {
     height: 100%;
 }
 
-
 .btn-contanier {
     justify-content: center;
 }
 
 .btn {
-
     position: relative;
     display: block;
     justify-content: center;
     margin: 50px auto;
     padding: 14px 50px;
     width: fit-content;
-    background: #00afb0;
-    border: 2px solid #00afb0;
+    background: var(--text-color);
+    border: 2px solid var(--accent-color);
     border-radius: 10px;
     font-size: 18px;
     color: black;
@@ -423,10 +431,7 @@ body {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2.5s;
-    box-shadow: 0 0 5px #00afb0, 0 0 #00afb0;
-
-
-
+    box-shadow: 0 0 10px var(--accent-color);
 }
 
 .btn::before {
@@ -436,7 +441,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background: #ededed;
+    background: var(--accent-color);
     z-index: -1;
     transition: .5s;
 }
@@ -445,23 +450,86 @@ body {
     width: 100%;
 }
 
-.contact-left{
-    flex-basis: 35%;
-}
-.contact-right{
-    flex-basis: 60%;
-}
-
-.contact-left p{
-    margin-top: 10px;
+.contact {
+    background: var(--section-bg);
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+}
+
+.contact form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+    flex: 1;
+    min-width: 48%;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px var(--accent-color);
+    outline: none;
+}
+
+.contact form textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+.contact form .btn {
+    align-self: center;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    background: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+    transition: all 0.3s ease;
+    color: #fff;
+    font-weight: 600;
+}
+
+.contact form .btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+
+/* Animations */
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
         opacity: 0;
     }
-
     100% {
         transform: translateX(0px);
         opacity: 1;
@@ -473,7 +541,6 @@ body {
         transform: translateX(100px);
         opacity: 0;
     }
-
     100% {
         transform: translateX(0px);
         opacity: 1;
@@ -485,7 +552,6 @@ body {
         transform: translateY(100px);
         opacity: 0;
     }
-
     100% {
         transform: translateY(0px);
         opacity: 1;
@@ -497,7 +563,6 @@ body {
         transform: translateY(-100px);
         opacity: 0;
     }
-
     100% {
         transform: translateY(0px);
         opacity: 1;

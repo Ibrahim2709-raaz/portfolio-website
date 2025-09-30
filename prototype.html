@@ -41,23 +41,24 @@
                     vitae erat. </p>
                 <div class="btn-box"> <a href="#">Know Me</a> <a href="#">Let's Talk</a> </div>
             </div>
-            <div class="hero-code">
-                <pre><code> const aboutMe = { 
-                codename: "Ibrahim Salman", 
-                role: "Computer Scient Student", 
-                stack: { 
-                    languages: ["Python", "Java", "C++", "JavaScript"], 
-                    frameworks: ["Bootstrap", "React", "Angular"], 
-                }, 
-                traits: [ "Problem Solver", "Pixel Perfectionist", "Dark Mode Advocate" ], 
-                missionStatement: "Turning ideas into reality", 
-                availability: "HIRE ME!!",
-             }; 
-                <div class="widget">
-                <p id="widget-text">Currently Working on something Awesome!</p>
-            </div>
-            </code></pre>
-
+            <div class="col-lg-6 hero-code mt-4 mt-lg-0 position-relative">
+                <pre><code class="language-javascript">
+const aboutMe = {
+    codename: "Ibrahim Salman",
+    role: "Computer Science Student",
+    stack: {
+        languages: ["Python", "Java", "C++", "JavaScript"],
+        frameworks: ["Bootstrap", "React", "Angular"],
+    },
+    traits: [
+        "Problem Solver",
+        "Pixel Perfectionist",
+        "Dark Mode Advocate"
+    ],
+    missionStatement: "Turning ideas into reality",
+    availability: "HIRE ME!!",
+};
+</code></pre>
             </div>
         </section> <!---------------About Me-------------->
         <section id="about">
@@ -140,30 +141,24 @@
                 <a href="Projects/projects.html" class="btn">See All</a>
             </div>
         </section>
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Contact Me</h1>
-                        <p><i class="fa-solid fa-paper-plane">ibrahim.salman2700@gmail.com</i></p>
-                        <p>+1 250 572 3028</p>
-                        <div class="social-icons">
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        </div>
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
-                    <div class="contact-right">
-                        <form>
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
-                            <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                            <button type="submit">Submit</button>
-                        </form>
+                    <div class="input-field">
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="textarea-field">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+
         <footer class="bg-dark text-light text-center py-3">
             <p class="mb-0">© 2025 Ibrahim Salman | All Rights Reserved</p>
         </footer>

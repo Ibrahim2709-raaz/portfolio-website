@@ -1,92 +1,99 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <link rel="stylesheet" href="about.css">
+  <title>About Me - Ibrahim</title>
+  <link rel="stylesheet" href="about.css"> <!-- Link to your main CSS -->
 </head>
-
 <body>
-  <header class="header">
-    <a href="#" class="logo">Ibrahim.</a>
-    <!-- Hamburger button -->
-    <div class="menu-btn" id="menu-btn">
-      ☰
+  <!-- Navbar -->
+   <header class="header">
+            <a href="#" class="logo">Ibrahim.</a>
+            <!-- Hamburger button -->
+            <div class="menu-btn" id="menu-btn">
+                ☰
+            </div>
+            <nav class="navbar" id="navbar">
+                <a href="prototype.html" style="--i:1;" class="active">Home</a>
+                <a href="About/about.html" style="--i:2;">About</a>
+                <a href="Projects/projects.html" style="--i:3;">Projects</a>
+                <a href="#" style="--i:4;">Blah Blah</a>
+                <a href="Contact/contact.html" style="--i:5;">Contact</a>
+            </nav>
+        </header>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1>About Me</h1>
+      <p>Get to know my journey, passions, and work beyond the screen.</p>
     </div>
-    <nav class="navbar" id="navbar">
-      <a href="../prototype.html" style="--i-1;">Home</a>
-      <a href="About/about.html" style="--i:2;" class="active">About</a>
-      <a href="../Projects/projects.html" style="--i-3;">Projects</a>
-      <a href="#" style="--i-4'">Blah Blah</a>
-      <a href="../Contact/contact.html" style="--i-5">Contact</a>
-    </nav>
-  </header>
-  <main class="about-me">
+  </section>
 
-    <!-- Intro Snapshot -->
-    <section class="intro">
-      <div class="intro-text">
-        <h1>Hi, I’m Ibrahim 👋</h1>
-        <p>I’m a Computer Science student passionate about AI, optimization, web development, and problem-solving. I
-          balance my technical journey with writing and storytelling.</p>
-      </div>
-      <div class="intro-image">
-        <img src="../images/me.jpg" alt="Ibrahim portrait">
-      </div>
-    </section>
+  <!-- Background -->
+  <section class="about-section">
+    <div class="container">
+      <h2>Background</h2>
+      <p>
+        I’m Ibrahim, a Computer Science student driven by curiosity and creativity.
+        My journey has always been about blending logic with imagination—whether it’s
+        building software, solving problems, or expressing through writing.
+        Each step forward is a way to explore both the digital and human sides of life.
+      </p>
+    </div>
+  </section>
 
-    <!-- CS Journey -->
-    <section class="cs-journey">
-      <h2>My Journey in Computer Science</h2>
-      <p>I chose CS because I’ve always been fascinated by how logic and creativity intersect. From building C++ systems
-        to exploring AI models and designing web apps, I love learning and solving challenges through code.</p>
-    </section>
+  <!-- Education -->
+  <section class="about-section">
+    <div class="container">
+      <h2>Education</h2>
+      <p>
+        Currently pursuing my studies in Computer Science, I’ve explored areas such as
+        data structures, optimization techniques, algorithms, and AI.  
+        My academic journey reflects not only technical skills but also critical thinking,
+        teamwork, and a strong commitment to lifelong learning.
+      </p>
+    </div>
+  </section>
 
-    <!-- Creative Side -->
-    <section class="creative">
-      <h2>Beyond Code</h2>
-      <p>I’m currently working on a symbolic story <em>“In the Temporary, Undeniable”</em> and a poetry collection on
-        themes of love, solitude, and hope. Writing allows me to explore the human side of my journey.</p>
-    </section>
+  <!-- Nonprofit -->
+  <section class="about-section">
+    <div class="container">
+      <h2>Nonprofit & Community Work</h2>
+      <p>
+        Outside academics, I founded and contribute to <strong>SERPA</strong>, a nonprofit initiative
+        that raises awareness in children’s libraries and youth centers. Over the past
+        six months, SERPA has reached 1,000+ people through informational campaigns,
+        fundraising efforts, and youth-centered projects.  
+        For me, tech and compassion go hand in hand.
+      </p>
+    </div>
+  </section>
 
-    <!-- Impact & Volunteering -->
-    <section class="impact">
-      <h2>Making an Impact</h2>
-      <p>Founder of <strong>SERPA</strong>, an NGO empowering youth through awareness campaigns and community projects,
-        reaching 1,000+ people in 6 months. I also volunteered at the <strong>NASA Space Apps Challenge</strong>,
-        supporting innovation worldwide.</p>
-    </section>
+  <!-- Beyond Work -->
+  <section class="about-section">
+    <div class="container">
+      <h2>Beyond Work</h2>
+      <p>
+        Beyond school and projects, I find meaning in poetry, storytelling, and exploring
+        cultural connections. My hobbies allow me to balance the analytical with the creative,
+        keeping me grounded and inspired.  
+        Whether it’s writing verses or reflecting on philosophy, I aim to connect deeply
+        with ideas and people alike.
+      </p>
+    </div>
+  </section>
 
-    <!-- Life & Journey -->
-    <section class="life">
-      <h2>My Journey</h2>
-      <p>Originally from Pakistan, I’m now studying in Canada as an international student. This experience has taught me
-        resilience, adaptability, and the value of community.</p>
-    </section>
+  <!-- Buttons -->
+  <div class="about-btns">
+    <a href="contact.html" class="btn">Let’s Connect</a>
+    <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
+  </div>
 
-    <!-- Quick Facts -->
-    <section class="quick-facts">
-      <h2>Quick Facts</h2>
-      <ul>
-        <li>🌐 Languages: English, Urdu, French (learning)</li>
-        <li>📚 Favorite Fields: AI, optimization, problem-solving algorithms</li>
-        <li>✍️ Hobbies: Writing, storytelling, exploring creative projects</li>
-        <li>🎥 Plans: Launching a YouTube channel soon</li>
-      </ul>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-      <h2>Let’s Connect</h2>
-      <p>I’m always open to learning, collaborating, and exploring new ideas. Feel free to reach out!</p>
-      <a href="contact.html" class="btn">📩 Contact Me</a>
-    </section>
-
-  </main>
-
-
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+            <p class="mb-0">© 2025 Ibrahim Salman | All Rights Reserved</p>
+        </footer>
 </body>
-
 </html>
