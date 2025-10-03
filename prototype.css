@@ -568,3 +568,60 @@ body {
         opacity: 1;
     }
 }
+
+
+/* --- Responsive Fixes --- */
+
+/* Hero Section (tablet) */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 120px 5% 50px;
+  }
+
+  .hero-code {
+    max-width: 90%;
+    font-size: 13px;
+  }
+
+  .hero-container h1 {
+    font-size: 36px;
+  }
+
+  .hero-container h3 {
+    font-size: 20px;
+  }
+}
+
+/* Hero Section (mobile) */
+@media (max-width: 576px) {
+  .hero-container {
+    padding: 100px 5% 30px;
+    gap: 1.5rem;
+  }
+
+  .hero-container h1 {
+    font-size: 28px;
+  }
+
+  .hero-container h3 {
+    font-size: 18px;
+  }
+
+  .hero-container p {
+    font-size: 14px;
+  }
+
+  .hero-code {
+    max-width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  /* Projects Section: 1 per row */
+  .project-list {
+    grid-template-columns: 1fr !important;
+  }
+}
