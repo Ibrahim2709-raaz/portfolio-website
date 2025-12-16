@@ -1,6 +1,6 @@
 // Typed.js effect
 var Typed = new Typed(".text", {
-  strings: ["Developer", "Pianist", "Dreamer"],
+  strings: ["Developer", "Pianist", "Dreamer", "Poet"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,

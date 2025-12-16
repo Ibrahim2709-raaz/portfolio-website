@@ -243,3 +243,109 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* =============================
+   Fade Image + Text Section
+============================= */
+
+.fade-split {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+/* TEXT */
+.fade-text {
+  width: 45%;
+  float: left;
+  color: var(--text-color);
+}
+
+.fade-text h2 {
+  text-align: left;
+  color: #38bdf8;
+}
+
+.fade-text p {
+  text-align: left;
+  color: #cbd5f5;
+}
+
+/* IMAGE */
+.fade-image {
+  width: 50%;
+  float: right;
+  position: relative;
+}
+
+.fade-image img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* FADE EFFECT */
+.fade-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--background) 0%,
+    rgba(15, 23, 42, 0) 100%
+  );
+  border-radius: 12px;
+}
+
+/* REVERSE LAYOUT */
+.fade-split.reverse .fade-text {
+  float: right;
+}
+
+.fade-split.reverse .fade-image {
+  float: left;
+}
+
+.fade-split.reverse .fade-image::before {
+  left: auto;
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--background) 0%,
+    rgba(15, 23, 42, 0) 100%
+  );
+}
+
+/* CLEAR FLOATS */
+.fade-split::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .fade-text,
+  .fade-image {
+    width: 100%;
+    float: none;
+  }
+
+  .fade-image {
+    margin-top: 30px;
+  }
+
+  .fade-image::before {
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      var(--background) 0%,
+      rgba(15, 23, 42, 0) 100%
+    );
+  }
+}
