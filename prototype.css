@@ -513,3 +513,16 @@ body {
     gap: 1.5rem;
   }
 }
+@media (max-width: 768px) {
+    .hero-code {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-code pre,
+    .hero-code code {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+}
