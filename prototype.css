@@ -590,3 +590,133 @@ html, body {
     max-width: 100%;
     height: auto;
 }
+/* ===============================
+   FINAL MOBILE POLISH (PHONES)
+================================ */
+
+@media (max-width: 600px) {
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 100px 6% 40px;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-content h3 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    margin: 16px 0 28px;
+  }
+
+  /* Buttons */
+  .hero-content .btn-box {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-box a {
+    width: 100%;
+    max-width: 260px;
+    height: 48px;
+    margin: 0 auto;
+  }
+
+  /* ---------- CODE BLOCK ---------- */
+  .hero-code {
+    width: 100%;
+    font-size: 12px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  /* ---------- ABOUT ---------- */
+  #about {
+    padding: 40px 20px;
+  }
+
+  .about-col-1 img {
+    width: 65%;
+    margin: 0 auto 20px;
+  }
+
+  .about-col-2 {
+    text-align: center;
+  }
+
+  .sub-title {
+    font-size: 34px;
+  }
+
+  .tab-titles {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .tab-links {
+    font-size: 15px;
+  }
+
+  /* ---------- PROJECTS ---------- */
+  #projects {
+    padding: 40px 20px;
+  }
+
+  .project {
+    border-radius: 12px;
+  }
+
+  .layer {
+    font-size: 13px;
+    padding: 16px;
+  }
+
+  /* Make hover effects tap-safe */
+  .project:hover .layer {
+    transform: none;
+  }
+
+  .layer {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    font-size: 13px;
+  }
+}
+
+/* ===============================
+   TOUCH & PERFORMANCE FIXES
+================================ */
+
+/* Prevent accidental zoom on input focus (iOS + Android) */
+input, textarea, button {
+  font-size: 16px;
+}
+
+/* Reduce animation cost on mobile */
+@media (max-width: 600px) {
+  * {
+    animation-duration: 0.6s !important;
+  }
+}
