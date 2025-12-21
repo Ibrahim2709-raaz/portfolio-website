@@ -526,3 +526,67 @@ body {
         word-break: break-word;
     }
 }
+
+/* =========================
+   ANDROID & MOBILE FIXES
+========================= */
+
+/* Prevent horizontal scroll globally */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Fix mobile viewport height bug */
+.hero {
+    min-height: 100svh; /* mobile-safe vh */
+}
+
+/* Kill dangerous large gaps */
+@media (max-width: 768px) {
+    .hero {
+        gap: 32px !important;
+        flex-direction: column;
+        padding: 120px 5% 40px;
+        text-align: center;
+    }
+}
+
+/* Buttons MUST be flexible */
+@media (max-width: 576px) {
+    .hero-content .btn-box {
+        width: 100% !important;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .btn-box a {
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+/* Code block Android overflow fix */
+.hero-code {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Navbar Android positioning fix */
+@media (max-width: 768px) {
+    .navbar {
+        right: 0;
+        left: auto;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* About section overflow guard */
+#about img {
+    max-width: 100%;
+    height: auto;
+}
