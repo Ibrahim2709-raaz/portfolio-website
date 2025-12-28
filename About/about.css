@@ -349,3 +349,31 @@ footer {
     );
   }
 }
+
+/* FIX: vertically center text next to image */
+.fade-split {
+  display: flex;
+  align-items: center;
+}
+
+.fade-text,
+.fade-image {
+  float: none;
+}
+/* ADD spacing between text and image */
+.fade-text {
+  margin-right: 5%;
+}
+
+.fade-split.reverse .fade-text {
+  margin-right: 0;
+  margin-left: 5%;
+}
+/* FIX spacing between text and image */
+.fade-split {
+  gap: 60px;
+}
+.fade-split.reverse {
+  flex-direction: row-reverse;
+}
+
