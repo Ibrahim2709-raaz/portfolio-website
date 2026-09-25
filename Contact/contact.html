@@ -1,213 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
-
-        body {
-            background: #081b29;
-            color: #ededed;
-        }
-
-        .header {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 25px;
-            color: #ededed;
-            text-decoration: none;
-            font-weight: 600;
-            cursor: default;
-            opacity: 0;
-            animation: slideRight 1s ease forwards;
-        }
-
-        /* Hamburger button */
-        .menu-btn {
-            display: none;
-            font-size: 30px;
-            color: #ededed;
-            cursor: pointer;
-        }
-
-        .navbar a {
-            font-size: 18px;
-            color: #ededed;
-            text-decoration: none;
-            font-weight: 500;
-            margin-left: 35px;
-            transition: .3s;
-            opacity: 0;
-            animation: slideTop 0.5s ease forwards;
-            animation-delay: calc(.2s * var(--i));
-        }
-
-        .navbar a:hover,
-        .navbar a.active {
-            color: #00afb0;
-        }
-
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            .menu-btn {
-                display: block;
-            }
-
-            .navbar {
-                display: none;
-                position: absolute;
-                top: 70px;
-                right: 10%;
-                background: #222;
-                flex-direction: column;
-                width: 200px;
-                padding: 10px;
-                border-radius: 8px;
-            }
-
-            .navbar.active {
-                display: flex;
-            }
-
-            .navbar a {
-                margin: 15px 0;
-            }
-        }
-
-        @keyframes slideRight {
-            0% { transform: translateX(-100px); opacity: 0; }
-            100% { transform: translateX(0px); opacity: 1; }
-        }
-
-        @keyframes slideTop {
-            0% { transform: translateY(100px); opacity: 0; }
-            100% { transform: translateY(0px); opacity: 1; }
-        }
-
-        .contact-container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column; 
-            align-items: center;
-            justify-content: center; 
-            gap: 20px; 
-            transition: .3s;
-            opacity: 0;
-            animation: slideTop 1.5s ease forwards;
-            animation-delay: calc(.2s * var(--i));
-        }
-
-        .contact-left {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .contact-left-title h2 {
-            font-weight: 600;
-            color: #ededed;
-            font-size: 40px;
-            margin-bottom: 5px;
-        }
-
-        .contact-left-title hr {
-            border: none;
-            width: 120px;
-            height: 5px;
-            background-color: #00afb0;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .contact-inputs {
-            width: 400px;
-            height: 50px;
-            border: none;
-            outline: none;
-            padding: 15px;
-            font-weight: 500;
-            color: #081b29;
-            border-radius: 10px;
-        }
-
-        textarea.contact-inputs {
-            height: 140px;
-            padding-top: 15px;
-            resize: none;
-        }
-
-        .contact-inputs:focus {
-            border: 2px solid #00afb0;
-        }
-
-        button {
-            padding: 12px 20px;
-            background: #00afb0;
-            color: #081b29;
-            border: none;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #009090;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Ibrahim Salman about internships, collaborations, and software projects.">
+  <meta name="theme-color" content="#0b1018">
+  <title>Contact — Ibrahim Salman</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../prototype.css">
+  <script src="../prototype.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Ibrahim.</a>
-        <div class="menu-btn" id="menu-btn">☰</div>
-        <nav class="navbar" id="navbar"> 
-            <a href="../index.html" style="--i:1;">Home</a> 
-            <a href="../About/about.html" style="--i:2;">About</a> 
-            <a href="../Projects/projects.html" style="--i:3;">Projects</a> 
-            <a href="#" style="--i:4;">Blah Blah</a> 
-            <a href="contact.html" style="--i:5;" class="active">Contact</a> 
-        </nav>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Ibrahim Salman, home"><span class="brand-mark" aria-hidden="true">IS</span><span>Ibrahim Salman</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Open navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="../Projects/projects.html">Work</a><a href="../About/about.html">About</a><a href="../index.html#now">Now</a><a class="nav-cta" href="contact.html" aria-current="page">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-hero section-shell reveal">
+      <p class="eyebrow">Contact</p>
+      <h1>Let’s make the first message useful.</h1>
+      <p>Tell me what you’re working on, where I might contribute, or simply what caught your attention. I’ll respond as soon as I can.</p>
     </header>
 
-    <div class="contact-container">
-        <form action="https://api.web3forms.com/submit" method="post" class="contact-left">
-            <div class="contact-left-title">
-                <h2>Get in Touch</h2>
-                <hr>
-            </div>
-            <input type="hidden" name="access_key" value="c65ec24a-02be-4178-a327-1d0630e4bd95">
-            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-            <textarea name="message" placeholder="Your Message" class="contact-inputs"></textarea>
-            <button type="submit">Submit <img src="images/arrow_icon.png" alt=""></button>
-        </form>
-    </div>
-    <footer class="bg-dark text-light text-center py-3">
-    <p class="mb-0">© 2025 Ibrahim Salman | All Rights Reserved</p>
+    <section class="section-shell contact-layout">
+      <div class="contact-copy reveal">
+        <p class="eyebrow">Good reasons to reach out</p>
+        <h2>Internships, projects, and thoughtful conversations.</h2>
+        <p>I’m especially interested in opportunities where I can learn from a team, contribute to a real product, and strengthen both my engineering and communication skills.</p>
+        <div class="contact-options">
+          <a href="https://github.com/Ibrahim2709-raaz" target="_blank" rel="noreferrer"><span>GitHub</span><span aria-hidden="true">↗</span></a>
+          <a href="../Projects/projects.html"><span>Project case studies</span><span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" action="https://api.web3forms.com/submit" method="post">
+        <input type="hidden" name="access_key" value="c65ec24a-02be-4178-a327-1d0630e4bd95">
+        <input type="hidden" name="subject" value="New portfolio message">
+        <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-row">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field"><label for="topic">What would you like to discuss?</label><input id="topic" name="topic" type="text" placeholder="Internship, collaboration, feedback…"></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+        <p class="form-note">Your details are used only to reply to this message. Submission is handled securely by Web3Forms.</p>
+        <button class="button button-primary" type="submit">Send message <span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">IS</span><span>Ibrahim Salman</span></a><p>Software with rhythm, clarity, and care.</p></div>
+    <div class="footer-links"><a href="../Projects/projects.html">Work</a><a href="../About/about.html">About</a><a href="contact.html">Contact</a><a href="https://github.com/Ibrahim2709-raaz" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    <p>© <span data-current-year>2026</span> Ibrahim Salman</p>
   </footer>
 </body>
 </html>
