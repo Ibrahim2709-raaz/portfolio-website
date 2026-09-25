@@ -1,116 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me - Ibrahim</title>
-  <link rel="stylesheet" href="about.css"> <!-- Link to your main CSS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about Ibrahim Salman: Computer Science student, developer, pianist, poet, and community volunteer.">
+  <meta name="theme-color" content="#0b1018">
+  <title>About — Ibrahim Salman</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../prototype.css">
+  <script src="../prototype.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
-   <header class="header">
-            <a href="#" class="logo">Ibrahim.</a>
-            <!-- Hamburger button -->
-            <div class="menu-btn" id="menu-btn">
-                ☰
-            </div>
-            <nav class="navbar" id="navbar">
-                <a href="../index.css" style="--i:1;">Home</a>
-                <a href="#" style="--i:2;" class="active">About</a>
-                <a href="../Projects/projects.html" style="--i:3;">Projects</a>
-                <a href="#" style="--i:4;">Blah Blah</a>
-                <a href="../Contact/contact.html" style="--i:5;">Contact</a>
-            </nav>
-        </header>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Ibrahim Salman, home"><span class="brand-mark" aria-hidden="true">IS</span><span>Ibrahim Salman</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Open navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="../Projects/projects.html">Work</a><a href="about.html" aria-current="page">About</a><a href="../index.html#now">Now</a><a class="nav-cta" href="../Contact/contact.html">Let’s talk</a>
+    </nav>
+  </header>
 
-  <!-- Hero -->
-  <section class="page-hero">
-    <div class="hero-content">
-      <h1>About Me</h1>
-      <p>Get to know my journey, passions, and work beyond the screen.</p>
-    </div>
-  </section>
+  <main id="main">
+    <header class="page-hero section-shell reveal">
+      <p class="eyebrow">About me</p>
+      <h1>Between logic and imagination.</h1>
+      <p>I’m learning how to build software that works well, communicates clearly, and respects the people using it.</p>
+    </header>
 
-  <!-- Background -->
-  <section class="fade-split">
-  <div class="fade-text">
-    <h2>A Story Still Being Written</h2>
-    <p>
-     I’m Ibrahim, a Computer Science student driven by curiosity and creativity.
-      My journey has always been about blending logic with imagination—whether it’s 
-      building software, solving problems, or expressing through writing. Each step 
-      forward is a way to explore both the digital and human sides of life. 
-    </p>
-  </div>
+    <section class="section-shell about-intro">
+      <div class="portrait-frame reveal"><img src="../images/me.webp" alt="Ibrahim Salman wearing a suit" loading="eager" width="1125" height="1500"><span class="portrait-note">Pakistan<br>to Canada<br>and onward</span></div>
+      <div class="reveal">
+        <p class="large-copy">I’m Ibrahim, a Computer Science student at Thompson Rivers University. I’m interested in the whole path from understanding a problem to shipping a thoughtful solution.</p>
+        <p class="muted-copy">Growing up in Pakistan and studying in Canada has given me more than a change of scenery. It has made me attentive to context: who is in the room, what assumptions a product makes, and how differently people can experience the same system.</p>
+        <p class="muted-copy">That perspective shapes my technical work. I enjoy building interfaces, thinking through requirements, and explaining decisions so another person can understand or improve them.</p>
+        <div class="timeline" aria-label="My journey">
+          <article><time>Now</time><div><h3>Computer Science at TRU</h3><p>Developing foundations in programming, algorithms, systems thinking, teamwork, and technical communication.</p></div></article>
+          <article><time>Ongoing</time><div><h3>SERPA community work</h3><p>Supporting awareness efforts in children’s libraries and youth centres, connecting technical ambition with social responsibility.</p></div></article>
+          <article><time>Always</time><div><h3>Piano and poetry</h3><p>Two practices that sharpen patience, structure, expression, and the ability to notice what feels slightly out of place.</p></div></article>
+        </div>
+      </div>
+    </section>
 
-  <div class="fade-image">
-    <img src="../images/story.png" alt="">
-  </div>
-</section>
+    <section class="section-shell">
+      <div class="section-heading reveal"><div><p class="eyebrow">How I work</p><h2>Principles before buzzwords.</h2></div><p>I’m still growing my toolkit. These are the habits I want every project to demonstrate while that toolkit expands.</p></div>
+      <div class="value-grid">
+        <article class="value-card reveal"><span>01</span><h3>Understand first</h3><p>I ask what the system needs to accomplish, who depends on it, and what could go wrong before choosing technology.</p></article>
+        <article class="value-card reveal"><span>02</span><h3>Make it legible</h3><p>Clear navigation, readable code, and useful documentation are all forms of respect for the next person.</p></article>
+        <article class="value-card reveal"><span>03</span><h3>Finish honestly</h3><p>I would rather show a smaller working project with lessons learned than decorate an unfinished idea with large claims.</p></article>
+      </div>
+    </section>
 
+    <section class="section-shell contact-callout reveal">
+      <p class="eyebrow">Continue the story</p><h2>See how those ideas become working projects.</h2>
+      <div class="button-row"><a class="button button-primary" href="../Projects/projects.html">Explore my work <span aria-hidden="true">→</span></a><a class="button button-secondary" href="../Contact/contact.html">Contact me</a></div>
+    </section>
+  </main>
 
-  <section class="fade-split reverse">
-  <div class="fade-text">
-    <h2>Education</h2>
-    <p>
-      Currently pursuing my studies in Computer Science, I’ve explored areas such as 
-      data structures, optimization techniques, algorithms, and AI. My academic journey 
-      reflects not only technical skills but also critical thinking, teamwork, and a strong 
-      commitment to lifelong learning.
-    </p>
-  </div>
-
-  <div class="fade-image">
-    <img src="../images/edu.jpg" alt="">
-  </div>
-</section>
-
-  <!-- Nonprofit -->
-  <section class="fade-split">
-  <div class="fade-text">
-    <h2>Nonprofit Work</h2>
-    <p>
-     Outside academics, I founded and contribute to <strong>SERPA</strong>, a 
-     nonprofit initiative that raises awareness in children’s libraries and youth 
-     centers. Over the past six months, SERPA has reached 1,000+ people through 
-     informational campaigns, fundraising efforts, and youth-centered projects. 
-     For me, tech and compassion go hand in hand.
-    </p>
-  </div>
-
-  <div class="fade-image">
-    <img src="../images/ngo.jpg" alt="">
-  </div>
-</section>
-
-
-  <!-- Beyond Work -->
-  <section class="fade-split reverse">
-  <div class="fade-text">
-    <h2>Beyond Work</h2>
-    <p>
-      Beyond school and projects, I find meaning in poetry, storytelling, and exploring 
-      cultural connections. My hobbies allow me to balance the analytical with the creative, 
-      keeping me grounded and inspired. Whether it’s writing verses or reflecting on philosophy, 
-      I aim to connect deeply with ideas and people alike.
-    </p>
-  </div>
-
-  <div class="fade-image">
-    <img src="../images/speech.jpg" alt="">
-  </div>
-</section>
-
-
-  <!-- Buttons -->
-  <div class="about-btns">
-    <a href="contact.html" class="btn">Let’s Connect</a>
-    <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
-  </div>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-light text-center py-3">
-            <p class="mb-0">© 2025 Ibrahim Salman | All Rights Reserved</p>
-        </footer>
+  <footer class="site-footer">
+    <div><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">IS</span><span>Ibrahim Salman</span></a><p>Software with rhythm, clarity, and care.</p></div>
+    <div class="footer-links"><a href="../Projects/projects.html">Work</a><a href="about.html">About</a><a href="../Contact/contact.html">Contact</a><a href="https://github.com/Ibrahim2709-raaz" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    <p>© <span data-current-year>2026</span> Ibrahim Salman</p>
+  </footer>
 </body>
 </html>
