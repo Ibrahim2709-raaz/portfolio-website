@@ -1,101 +1,99 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projects</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="projects.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case studies from Ibrahim Salman's web development and software systems work.">
+  <meta name="theme-color" content="#0b1018">
+  <title>Projects — Ibrahim Salman</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../prototype.css">
+  <script src="../prototype.js" defer></script>
 </head>
-
 <body>
-    <header class="header">
-        <a href="#" class="logo">Ibrahim.</a>
-        <!-- Hamburger button -->
-        <div class="menu-btn" id="menu-btn">
-            ☰
-        </div>
-        <nav class="navbar" id="navbar">
-            <a href="../index.html" style="--i:1;">Home</a>
-            <a href="../About/about.html" style="--i:2;">About</a>
-            <a href="projects.html" style="--i:3;" class="active">Projects</a>
-            <a href="#" style="--i:4;">Blah Blah</a>
-            <a href="../Contact/contact.html" style="--i:5;">Contact</a>
-        </nav>
-    </header>
-    <section id="projects">
-        <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-        </div>
-        <div class="project-list">
-            <div class="project">
-                <img src="../images/kva.png">
-                <div class="layer">
-                    <h3>Kamloops Volleyball Association</h3>
-                    <div class="btn-box"> <a href="#">See More</a></div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="../images/bms.png">
-                <div class="layer">
-                    <h3>Banking Management System</h3>
-                    
-                    <div class="btn-box"> <a href="#">See More</a></div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="../images/me.jpg">
-                <div class="layer">
-                    <h3>AI Projects</h3>
-                    <p>Image Classifier (CNN, PyTorch)</p>
-                    <p>Banking System Simulator (Java)</p>
-                    <p>Sentiment Analysis Tool</p>
-                    <div class="btn-box"> <a href="#">See More</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="project-list">
-            <div class="project">
-                <img src="../images/me.jpg">
-                <div class="layer">
-                    <h3>Software Projects</h3>
-                    <p>Inventory Management System (C++)</p>
-                    <p>Banking System Simulator (Java)</p>
-                    <p>Sudoku Solver (Python)</p>
-                    <div class="btn-box"> <a href="#">See More</a></div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="../images/me.jpg">
-                <div class="layer">
-                    <h3>Web Projects</h3>
-                    <p>Portfolio Website</p>
-                    <p>E-Commerce Storefront</p>
-                    <p>Blog Platform</p>
-                    <div class="btn-box"> <a href="#">See More</a></div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="../images/me.jpg">
-                <div class="layer">
-                    <h3>AI Projects</h3>
-                    <p>Image Classifier (CNN, PyTorch)</p>
-                    <p>Banking System Simulator (Java)</p>
-                    <p>Sentiment Analysis Tool</p>
-                    <div class="btn-box"> <a href="#">See More</a></div>
-                </div>
-            </div>
-        </div> 
-        <div class="btn-container">
-            <a href="#" class="btn">See All</a>
-        </div>
-    </section>
-    <script src="projects.js"></script>
-</body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Ibrahim Salman, home"><span class="brand-mark" aria-hidden="true">IS</span><span>Ibrahim Salman</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Open navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="projects.html" aria-current="page">Work</a><a href="../About/about.html">About</a><a href="../index.html#now">Now</a><a class="nav-cta" href="../Contact/contact.html">Let’s talk</a>
+    </nav>
+  </header>
 
+  <main id="main">
+    <header class="page-hero section-shell reveal">
+      <p class="eyebrow">Selected case studies · 2025–2026</p>
+      <h1>Work with a reason behind it.</h1>
+      <p>I’m early in my career, so I value honest scope over inflated claims. These projects show how I turn a brief into structure, make decisions, and finish something people can inspect.</p>
+    </header>
+
+    <div class="section-shell detail-grid">
+      <aside class="detail-aside reveal">
+        <p class="eyebrow">Project index</p>
+        <h2>Three ways of thinking.</h2>
+        <p>A community interface, a requirements-led system, and a personal product.</p>
+        <ul>
+          <li><strong>01</strong><span>KVA website</span></li>
+          <li><strong>02</strong><span>Retail system</span></li>
+          <li><strong>03</strong><span>Portfolio</span></li>
+        </ul>
+      </aside>
+
+      <div>
+        <article class="case-study reveal" id="kva">
+          <p class="project-type">01 · Front-end development</p>
+          <h2>Kamloops Volleyball Association</h2>
+          <p>A multi-page website concept for players and families who need a clear path to programs, club information, gallery content, and contact details.</p>
+          <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>HTML, CSS, JavaScript</strong></div><div><span>Status</span><strong>Live on GitHub Pages</strong></div></div>
+          <div class="case-notes">
+            <article><h3>Problem</h3><p>Several audience groups needed different information without making the navigation feel fragmented.</p></article>
+            <article><h3>Approach</h3><p>I separated youth, adult, organization, gallery, and contact content into predictable page groups.</p></article>
+            <article><h3>What I learned</h3><p>Shared navigation and styling must be planned early when a static site grows beyond one page.</p></article>
+          </div>
+          <div class="text-links"><a href="https://ibrahim2709-raaz.github.io/KVA-Project/" target="_blank" rel="noreferrer">Visit live site ↗</a><a href="https://github.com/Ibrahim2709-raaz/KVA-Project" target="_blank" rel="noreferrer">View source ↗</a></div>
+        </article>
+
+        <article class="case-study reveal" id="retail">
+          <p class="project-type">02 · Requirements & system design</p>
+          <h2>Retail Resale Management System</h2>
+          <p>A requirements-driven design for inventory, sales, customers, credit, and payments. The project focuses on the thinking that should happen before implementation begins.</p>
+          <div class="case-meta"><div><span>Role</span><strong>Systems analyst</strong></div><div><span>Focus</span><strong>Requirements engineering</strong></div><div><span>Output</span><strong>Traceable documentation</strong></div></div>
+          <div class="case-notes">
+            <article><h3>Problem</h3><p>Retail workflows quickly become inconsistent when inventory, payments, credit, and customer records are treated separately.</p></article>
+            <article><h3>Approach</h3><p>I documented the business areas as one connected system and defined their responsibilities before choosing implementation details.</p></article>
+            <article><h3>What I learned</h3><p>Clear requirements reduce ambiguity and make later technical decisions easier to defend.</p></article>
+          </div>
+          <div class="text-links"><a href="https://github.com/Ibrahim2709-raaz/retail-resale-management-system" target="_blank" rel="noreferrer">View repository ↗</a></div>
+        </article>
+
+        <article class="case-study reveal" id="portfolio">
+          <p class="project-type">03 · Personal product</p>
+          <h2>Portfolio website</h2>
+          <p>A lightweight, accessible site that replaces a generic project gallery with a clear story about what I build, how I think, and what I’m learning.</p>
+          <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>Semantic HTML, CSS, JS</strong></div><div><span>Delivery</span><strong>GitHub Pages</strong></div></div>
+          <div class="case-notes">
+            <article><h3>Problem</h3><p>The earlier version looked polished at first glance but contained placeholders, broken navigation, and unsupported claims.</p></article>
+            <article><h3>Approach</h3><p>I built a coherent visual system around code, rhythm, and personal context while keeping dependencies minimal.</p></article>
+            <article><h3>What changed</h3><p>Every action works, projects are verifiable, navigation is accessible, and content reflects real experience.</p></article>
+          </div>
+          <div class="text-links"><a href="../index.html">Visit homepage →</a><a href="https://github.com/Ibrahim2709-raaz/portfolio-website" target="_blank" rel="noreferrer">View source ↗</a></div>
+        </article>
+      </div>
+    </div>
+
+    <section class="section-shell contact-callout reveal">
+      <p class="eyebrow">What comes next</p><h2>The next case study could start with your problem.</h2><p>I’m open to student opportunities, internships, and thoughtful collaborations.</p>
+      <div class="button-row"><a class="button button-primary" href="../Contact/contact.html">Start a conversation <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">IS</span><span>Ibrahim Salman</span></a><p>Software with rhythm, clarity, and care.</p></div>
+    <div class="footer-links"><a href="projects.html">Work</a><a href="../About/about.html">About</a><a href="../Contact/contact.html">Contact</a><a href="https://github.com/Ibrahim2709-raaz" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    <p>© <span data-current-year>2026</span> Ibrahim Salman</p>
+  </footer>
+</body>
 </html>
