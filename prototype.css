@@ -110,7 +110,7 @@ h3 { font-size: clamp(1.35rem, 2vw, 2rem); }
 
 .story-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(50px, 9vw, 120px); align-items: center; }
 .portrait-frame { position: relative; max-width: 470px; padding: 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); transform: rotate(-1.5deg); }
-.portrait-frame img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 20%; border-radius: 14px; filter: saturate(.85); }
+.portrait-frame img { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: contain; border-radius: 14px; filter: saturate(.85); }
 .portrait-note { position: absolute; right: -24px; bottom: 36px; padding: 13px 16px; background: var(--coral); color: var(--night); font: 700 .7rem/1.5 "DM Mono", monospace; text-transform: uppercase; transform: rotate(4deg); }
 .story-copy > p:not(.eyebrow) { color: var(--muted); font-size: 1.05rem; }
 .story-points { display: grid; gap: 5px; margin: 32px 0; }
