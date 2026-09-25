@@ -1,56 +1,63 @@
-# Personal Portfolio Website
+# Ibrahim Salman — Personal Portfolio
 
-A responsive personal portfolio for presenting my background, technical skills, and software projects in one place.
+A responsive, accessible portfolio that presents my software work through honest case studies and connects my technical practice with music, writing, and community work.
 
 **Live site:** [ibrahim2709-raaz.github.io/portfolio-website](https://ibrahim2709-raaz.github.io/portfolio-website/)
 
-## Features
+## What the site includes
 
-- Responsive navigation with a mobile menu
-- Landing section with animated role text and highlighted code
-- About section covering education, experience, and skills
-- Project categories for software, web, and AI work
+- A focused introduction and current learning goals
+- Three verifiable project case studies
 - Dedicated About, Projects, and Contact pages
-- Contact form interface
+- A working contact form powered by Web3Forms
+- Keyboard-friendly navigation and visible focus states
+- Reduced-motion support and responsive layouts
+- Open Graph metadata, a favicon, sitemap, and robots file
 
 ## Built with
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- Typed.js
-- Prism.js
+- Semantic HTML5
+- Modern CSS with custom properties and responsive layouts
+- Vanilla JavaScript
+- GitHub Pages
+
+The site intentionally has no JavaScript framework or build step. This keeps it fast, portable, and easy to inspect.
 
 ## Project structure
 
 ```text
 portfolio-website/
-├── About/            # Extended About page
-├── Contact/          # Contact page
-├── Projects/         # Project listings
-├── images/           # Site imagery
-├── index.html        # Main landing page
-├── prototype.css     # Main styles
-└── prototype.js      # Interactions and animations
+├── About/about.html
+├── Contact/contact.html
+├── Projects/projects.html
+├── images/
+├── index.html
+├── prototype.css
+├── prototype.js
+├── robots.txt
+└── sitemap.xml
 ```
 
 ## Run locally
 
-No build process is required.
+Clone the repository and serve it with any static file server:
 
-1. Clone the repository:
+```bash
+git clone https://github.com/Ibrahim2709-raaz/portfolio-website.git
+cd portfolio-website
+python -m http.server 8000
+```
 
-   ```bash
-   git clone https://github.com/Ibrahim2709-raaz/portfolio-website.git
-   ```
+Then open [http://localhost:8000](http://localhost:8000).
 
-2. Open `index.html` in a browser, or serve the directory with a local development server.
+## Accessibility
 
-## Status
-
-The site is an evolving portfolio. Planned improvements include connecting the contact form to a form service, replacing placeholder project entries with live repositories, and continuing accessibility and mobile-layout refinements.
+The site uses semantic landmarks, labelled form controls, keyboard-accessible navigation, visible focus styles, descriptive image text, and a `prefers-reduced-motion` fallback.
 
 ## Author
 
 [Ibrahim Salman](https://github.com/Ibrahim2709-raaz)
+
+## License
+
+Released under the [MIT License](LICENSE).
