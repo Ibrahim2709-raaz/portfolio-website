@@ -7,7 +7,7 @@ A responsive, accessible portfolio that presents my software work through honest
 ## What the site includes
 
 - A focused introduction and current learning goals
-- Three verifiable project case studies
+- Four verifiable project case studies, including reproducible GNN–RL research
 - Dedicated About, Projects, and Contact pages
 - A working contact form powered by Web3Forms
 - Keyboard-friendly navigation and visible focus states
