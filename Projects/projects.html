@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Case studies from Ibrahim Salman's web development and software systems work.">
+  <meta name="description" content="Case studies from Ibrahim Salman's machine-learning research, web development, and software systems work.">
   <meta name="theme-color" content="#0b1018">
   <title>Projects — Ibrahim Salman</title>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../prototype.css?v=20260925">
+  <link rel="stylesheet" href="../prototype.css?v=20260926">
   <script src="../prototype.js?v=20260925" defer></script>
 </head>
 <body>
@@ -33,18 +33,34 @@
     <div class="section-shell detail-grid">
       <aside class="detail-aside reveal">
         <p class="eyebrow">Project index</p>
-        <h2>Three ways of thinking.</h2>
-        <p>A community interface, a requirements-led system, and a personal product.</p>
+        <h2>Four ways of thinking.</h2>
+        <p>Research, interface design, systems analysis, and a personal product.</p>
         <ul>
-          <li><strong>01</strong><span>KVA website</span></li>
-          <li><strong>02</strong><span>Retail system</span></li>
-          <li><strong>03</strong><span>Portfolio</span></li>
+          <li><strong>01</strong><span>GNN–RL routing</span></li>
+          <li><strong>02</strong><span>KVA website</span></li>
+          <li><strong>03</strong><span>Retail system</span></li>
+          <li><strong>04</strong><span>Portfolio</span></li>
         </ul>
       </aside>
 
       <div>
+        <article class="case-study reveal" id="gnn-routing">
+          <p class="project-type">01 · Machine-learning research</p>
+          <h2>GNN–RL Self-Healing Disaster Routing</h2>
+          <p>I authored the research with Jaspreet Kaur and co-produced the code for a self-healing routing framework designed to keep healthcare wireless sensor networks connected through disaster-induced node failures.</p>
+          <div class="case-meta"><div><span>Role</span><strong>Research author & code co-producer</strong></div><div><span>Stack</span><strong>Python, PyTorch, NetworkX</strong></div><div><span>Status</span><strong>Manuscript submitted</strong></div></div>
+          <div class="research-result" aria-label="Key simulation result"><div><span>GNN–RL</span><strong>96.0%</strong><small>mean route delivery</small></div><div><span>LSTM–RL</span><strong>89.6%</strong><small>mean route delivery</small></div><p>100 paired trials · extreme-severity simulation · p = 0.0267</p></div>
+          <div class="case-notes">
+            <article><h3>Research question</h3><p>Can a routing system use network structure and live risk signals to recover paths when a disaster damages relays carrying patient-sensor data?</p></article>
+            <article><h3>Model insight</h3><p>Ablation work exposed a mismatch: binary GNN labels discarded the continuous risk signal used by the RL reward. I moved the final GNN to MSE regression over continuous node risk while retaining graph-aware aggregation.</p></article>
+            <article><h3>Evaluation</h3><p>The 74-node simulator compares six routing strategies across multiple severities, with fixed seed ranges, ablations, statistical testing, and saved reference outputs for reproducibility.</p></article>
+          </div>
+          <p class="case-caveat">The results are based on simulated networks. Real deployment traces, mobility, hardware energy measurements, and clinical validation remain future work.</p>
+          <div class="text-links"><a href="https://github.com/Ibrahim2709-raaz/gnn-rl-disaster-routing" target="_blank" rel="noreferrer">View reproducibility code ↗</a></div>
+        </article>
+
         <article class="case-study reveal" id="kva">
-          <p class="project-type">01 · Front-end development</p>
+          <p class="project-type">02 · Front-end development</p>
           <h2>Kamloops Volleyball Association</h2>
           <p>A multi-page website concept for players and families who need a clear path to programs, club information, gallery content, and contact details.</p>
           <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>HTML, CSS, JavaScript</strong></div><div><span>Status</span><strong>Live on GitHub Pages</strong></div></div>
@@ -57,7 +73,7 @@
         </article>
 
         <article class="case-study reveal" id="retail">
-          <p class="project-type">02 · Requirements & system design</p>
+          <p class="project-type">03 · Requirements & system design</p>
           <h2>Retail Resale Management System</h2>
           <p>A requirements-driven design for inventory, sales, customers, credit, and payments. The project focuses on the thinking that should happen before implementation begins.</p>
           <div class="case-meta"><div><span>Role</span><strong>Systems analyst</strong></div><div><span>Focus</span><strong>Requirements engineering</strong></div><div><span>Output</span><strong>Traceable documentation</strong></div></div>
@@ -70,7 +86,7 @@
         </article>
 
         <article class="case-study reveal" id="portfolio">
-          <p class="project-type">03 · Personal product</p>
+          <p class="project-type">04 · Personal product</p>
           <h2>Portfolio website</h2>
           <p>A lightweight, accessible site that replaces a generic project gallery with a clear story about what I build, how I think, and what I’m learning.</p>
           <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>Semantic HTML, CSS, JS</strong></div><div><span>Delivery</span><strong>GitHub Pages</strong></div></div>
