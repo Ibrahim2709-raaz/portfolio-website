@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../prototype.css?v=20260926">
+  <link rel="stylesheet" href="../prototype.css?v=20260926-2">
   <script src="../prototype.js?v=20260925" defer></script>
 </head>
 <body>
@@ -33,13 +33,15 @@
     <div class="section-shell detail-grid">
       <aside class="detail-aside reveal">
         <p class="eyebrow">Project index</p>
-        <h2>Four ways of thinking.</h2>
-        <p>Research, interface design, systems analysis, and a personal product.</p>
+        <h2>Six ways of thinking.</h2>
+        <p>Machine-learning research, mobile experimentation, team development, interface design, systems analysis, and a personal product.</p>
         <ul>
           <li><strong>01</strong><span>GNN–RL routing</span></li>
-          <li><strong>02</strong><span>KVA website</span></li>
-          <li><strong>03</strong><span>Retail system</span></li>
-          <li><strong>04</strong><span>Portfolio</span></li>
+          <li><strong>02</strong><span>MD3 methodology</span></li>
+          <li><strong>03</strong><span>MedReminder</span></li>
+          <li><strong>04</strong><span>KVA website</span></li>
+          <li><strong>05</strong><span>Retail system</span></li>
+          <li><strong>06</strong><span>Portfolio</span></li>
         </ul>
       </aside>
 
@@ -59,8 +61,35 @@
           <div class="text-links"><a href="https://github.com/Ibrahim2709-raaz/gnn-rl-disaster-routing" target="_blank" rel="noreferrer">View reproducibility code ↗</a></div>
         </article>
 
+        <article class="case-study reveal" id="md3">
+          <p class="project-type">02 · Android usability experiment</p>
+          <h2>MD3 Touch Target Methodology</h2>
+          <p>The repository credits me as the project’s original developer. I built the foundation for an Android experiment that studies how interface target size affects task speed and misclick frequency.</p>
+          <div class="case-meta"><div><span>Role</span><strong>Original developer & contributor</strong></div><div><span>Stack</span><strong>Java, Android SDK, Material Components</strong></div><div><span>Version</span><strong>v0.3.0</strong></div></div>
+          <div class="case-notes">
+            <article><h3>Question</h3><p>How does reducing the size of common controls change completion time and interaction accuracy on a mobile screen?</p></article>
+            <article><h3>Method</h3><p>Buttons, toggles, and radio controls appear at randomized locations across five size conditions while the app records trials, timing, misclicks, and averages.</p></article>
+            <article><h3>Contribution</h3><p>I created the original Android project and experimental foundation; the shared repository documents later extensions, UI improvements, and tracking work by a collaborator.</p></article>
+          </div>
+          <div class="text-links"><a href="https://github.com/mrtonguelicker/MD3Methodology" target="_blank" rel="noreferrer">View team repository ↗</a></div>
+        </article>
+
+        <article class="case-study reveal" id="med-reminder">
+          <p class="project-type">03 · Collaborative Android development</p>
+          <h2>MedReminder</h2>
+          <p>A completed three-person Android term project for medication schedules, dose logging, refill tracking, alarms, and adherence history. My commits span product features, API integration, interface work, and team integration.</p>
+          <div class="case-meta"><div><span>Role</span><strong>Android developer & collaborator</strong></div><div><span>Stack</span><strong>Java, Android SDK, Gradle, APIs</strong></div><div><span>Status</span><strong>Completed · April 2026</strong></div></div>
+          <div class="case-notes">
+            <article><h3>Features delivered</h3><p>I implemented medication functionality and layouts, settings auto-save, light and dark themes, data clearing, emergency contacts, snooze controls, and quiet hours.</p></article>
+            <article><h3>Data & integration</h3><p>I built the barcode-scanning flow with real-time drug-lookup API support plus medication-history logging, a calendar heatmap, and CSV export.</p></article>
+            <article><h3>Collaboration</h3><p>I resolved pull-request and integration errors, merged teammates’ Today-screen and dosage-tracking work, and contributed animations, Material UI refinements, and splash-screen branding.</p></article>
+          </div>
+          <p class="case-caveat">The repository records these contributions across commits from April 2–16, 2026. The term project concluded later that month.</p>
+          <div class="text-links"><a href="https://github.com/mrtonguelicker/MedReminder" target="_blank" rel="noreferrer">View team repository ↗</a></div>
+        </article>
+
         <article class="case-study reveal" id="kva">
-          <p class="project-type">02 · Front-end development</p>
+          <p class="project-type">04 · Front-end development</p>
           <h2>Kamloops Volleyball Association</h2>
           <p>A multi-page website concept for players and families who need a clear path to programs, club information, gallery content, and contact details.</p>
           <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>HTML, CSS, JavaScript</strong></div><div><span>Status</span><strong>Live on GitHub Pages</strong></div></div>
@@ -73,7 +102,7 @@
         </article>
 
         <article class="case-study reveal" id="retail">
-          <p class="project-type">03 · Requirements & system design</p>
+          <p class="project-type">05 · Requirements & system design</p>
           <h2>Retail Resale Management System</h2>
           <p>A requirements-driven design for inventory, sales, customers, credit, and payments. The project focuses on the thinking that should happen before implementation begins.</p>
           <div class="case-meta"><div><span>Role</span><strong>Systems analyst</strong></div><div><span>Focus</span><strong>Requirements engineering</strong></div><div><span>Output</span><strong>Traceable documentation</strong></div></div>
@@ -86,7 +115,7 @@
         </article>
 
         <article class="case-study reveal" id="portfolio">
-          <p class="project-type">04 · Personal product</p>
+          <p class="project-type">06 · Personal product</p>
           <h2>Portfolio website</h2>
           <p>A lightweight, accessible site that replaces a generic project gallery with a clear story about what I build, how I think, and what I’m learning.</p>
           <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>Semantic HTML, CSS, JS</strong></div><div><span>Delivery</span><strong>GitHub Pages</strong></div></div>
