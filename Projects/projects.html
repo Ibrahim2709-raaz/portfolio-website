@@ -42,15 +42,16 @@
     <div class="section-shell detail-grid">
       <aside class="detail-aside reveal">
         <p class="eyebrow">Project index</p>
-        <h2>Six ways of thinking.</h2>
-        <p>Machine-learning research, mobile experimentation, team development, interface design, systems analysis, and a personal product.</p>
+        <h2>Seven ways of thinking.</h2>
+        <p>Machine-learning research, LLM infrastructure, mobile experimentation, team development, interface design, systems analysis, and a personal product.</p>
         <ul>
           <li><strong>01</strong><span>GNN–RL routing</span></li>
-          <li><strong>02</strong><span>MD3 methodology</span></li>
-          <li><strong>03</strong><span>MedReminder</span></li>
-          <li><strong>04</strong><span>KVA website</span></li>
-          <li><strong>05</strong><span>Retail system</span></li>
-          <li><strong>06</strong><span>Portfolio</span></li>
+          <li><strong>02</strong><span>LLM gateway</span></li>
+          <li><strong>03</strong><span>MD3 methodology</span></li>
+          <li><strong>04</strong><span>MedReminder</span></li>
+          <li><strong>05</strong><span>KVA website</span></li>
+          <li><strong>06</strong><span>Retail system</span></li>
+          <li><strong>07</strong><span>Portfolio</span></li>
         </ul>
       </aside>
 
@@ -70,8 +71,21 @@
           <div class="text-links"><a href="https://github.com/Ibrahim2709-raaz/gnn-rl-disaster-routing" target="_blank" rel="noreferrer">View reproducibility code ↗</a></div>
         </article>
 
+        <article class="case-study reveal" id="llm-gateway">
+          <p class="project-type">02 · LLM infrastructure · In development</p>
+          <h2>Multi-Provider LLM Gateway</h2>
+          <p>I’m designing a provider-neutral gateway that gives applications one OpenAI-compatible interface while selecting language-model providers according to cost, latency, availability, and task complexity.</p>
+          <div class="case-meta"><div><span>Role</span><strong>Architect & developer</strong></div><div><span>Proposed stack</span><strong>Python, FastAPI, PostgreSQL, Redis</strong></div><div><span>Status</span><strong>Planning & initial scaffolding</strong></div></div>
+          <div class="case-notes">
+            <article><h3>System goal</h3><p>Separate application code from individual model vendors while keeping routing policy, access control, and operational limits in one service.</p></article>
+            <article><h3>Routing design</h3><p>Requests will be evaluated against task complexity, provider health, latency, and cost, with automatic retries and fallback when the preferred route fails.</p></article>
+            <article><h3>Operational plan</h3><p>Per-client permissions, Redis-backed rate limits and caching, token budgets, structured traces, Prometheus metrics, and Grafana dashboards are part of the roadmap.</p></article>
+          </div>
+          <p class="case-caveat">This project is at the planning and initial scaffolding stage. The architecture and roadmap are defined; provider integrations, routing logic, and production hardening are still in development.</p>
+        </article>
+
         <article class="case-study reveal" id="md3">
-          <p class="project-type">02 · Android usability experiment</p>
+          <p class="project-type">03 · Android usability experiment</p>
           <h2>MD3 Touch Target Methodology</h2>
           <p>The repository credits me as the project’s original developer. I built the foundation for an Android experiment that studies how interface target size affects task speed and misclick frequency.</p>
           <div class="case-meta"><div><span>Role</span><strong>Original developer & contributor</strong></div><div><span>Stack</span><strong>Java, Android SDK, Material Components</strong></div><div><span>Version</span><strong>v0.3.0</strong></div></div>
@@ -101,7 +115,7 @@
         </article>
 
         <article class="case-study reveal" id="med-reminder">
-          <p class="project-type">03 · Collaborative Android development</p>
+          <p class="project-type">04 · Collaborative Android development</p>
           <h2>MedReminder</h2>
           <p>A completed three-person Android term project for medication schedules, dose logging, refill tracking, alarms, and adherence history. My commits span product features, API integration, interface work, and team integration.</p>
           <div class="case-meta"><div><span>Role</span><strong>Android developer & collaborator</strong></div><div><span>Stack</span><strong>Java, Android SDK, Gradle, APIs</strong></div><div><span>Status</span><strong>Completed · April 2026</strong></div></div>
@@ -115,7 +129,7 @@
         </article>
 
         <article class="case-study reveal" id="kva">
-          <p class="project-type">04 · Front-end development</p>
+          <p class="project-type">05 · Front-end development</p>
           <h2>Kamloops Volleyball Association</h2>
           <p>A multi-page website concept for players and families who need a clear path to programs, club information, gallery content, and contact details.</p>
           <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>HTML, CSS, JavaScript</strong></div><div><span>Status</span><strong>Live on GitHub Pages</strong></div></div>
@@ -128,7 +142,7 @@
         </article>
 
         <article class="case-study reveal" id="retail">
-          <p class="project-type">05 · Requirements & system design</p>
+          <p class="project-type">06 · Requirements & system design</p>
           <h2>Retail Resale Management System</h2>
           <p>A requirements-driven design for inventory, sales, customers, credit, and payments. The project focuses on the thinking that should happen before implementation begins.</p>
           <div class="case-meta"><div><span>Role</span><strong>Systems analyst</strong></div><div><span>Focus</span><strong>Requirements engineering</strong></div><div><span>Output</span><strong>Traceable documentation</strong></div></div>
@@ -141,7 +155,7 @@
         </article>
 
         <article class="case-study reveal" id="portfolio">
-          <p class="project-type">06 · Personal product</p>
+          <p class="project-type">07 · Personal product</p>
           <h2>Portfolio website</h2>
           <p>A lightweight, accessible site that replaces a generic project gallery with a clear story about what I build, how I think, and what I’m learning.</p>
           <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>Semantic HTML, CSS, JS</strong></div><div><span>Delivery</span><strong>GitHub Pages</strong></div></div>
