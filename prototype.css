@@ -108,6 +108,19 @@ h3 { font-size: clamp(1.35rem, 2vw, 2rem); }
 .gateway-router span { color: var(--muted); font: .55rem "DM Mono", monospace; }
 .gateway-providers { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
 .gateway-providers span { display: grid; place-items: center; min-height: 42px; border: 1px solid var(--line); border-radius: 9px; color: var(--muted); font: 700 .62rem "DM Mono", monospace; }
+.vision-visual { position: relative; padding: 20px; background: linear-gradient(145deg, #0b1820, #132a30); color: var(--ink); }
+.vision-frame { position: relative; height: 215px; border: 1px solid rgba(85,214,194,.35); border-radius: 12px; background: radial-gradient(circle at 65% 42%, rgba(241,199,91,.18), transparent 15%), linear-gradient(130deg, transparent 0 35%, rgba(85,214,194,.08) 35% 65%, transparent 65%); }
+.vision-frame::before, .vision-frame::after { content: ""; position: absolute; background: rgba(85,214,194,.2); }
+.vision-frame::before { top: 50%; right: 0; left: 0; height: 1px; }
+.vision-frame::after { top: 0; bottom: 0; left: 50%; width: 1px; }
+.vision-box { position: absolute; padding: 4px 6px; border: 1px solid var(--cyan); color: var(--cyan); font: .55rem "DM Mono", monospace; }
+.vision-box b { color: var(--ink); }
+.vision-box-person { top: 28px; left: 34px; width: 82px; height: 138px; }
+.vision-box-cup { right: 34px; bottom: 34px; width: 68px; height: 64px; border-color: var(--yellow); color: var(--yellow); }
+.vision-focus { position: absolute; top: 50%; left: 50%; width: 22px; height: 22px; border: 1px solid var(--coral); border-radius: 50%; transform: translate(-50%,-50%); }
+.vision-caption { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-top: 16px; font-size: .67rem; }
+.vision-caption span { color: var(--coral); font: .58rem "DM Mono", monospace; }
+.vision-caption strong { color: var(--muted); }
 .touch-visual { position: relative; display: grid; place-items: center; padding: 24px; background: #ebe5d8; color: var(--night); }
 .touch-targets { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; }
 .touch-targets span { display: grid; place-items: center; aspect-ratio: 1; border: 2px solid var(--night); border-radius: 50%; background: var(--yellow); font: 700 .6rem "DM Mono", monospace; box-shadow: 4px 5px 0 rgba(11,16,24,.14); }
