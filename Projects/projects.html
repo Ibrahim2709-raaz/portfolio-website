@@ -73,16 +73,16 @@
         </article>
 
         <article class="case-study reveal" id="llm-gateway">
-          <p class="project-type">02 · LLM infrastructure · In development</p>
+          <p class="project-type">02 · LLM infrastructure · Completed</p>
           <h2>Multi-Provider LLM Gateway</h2>
-          <p>I’m designing a provider-neutral gateway that gives applications one OpenAI-compatible interface while selecting language-model providers according to cost, latency, availability, and task complexity.</p>
-          <div class="case-meta"><div><span>Role</span><strong>Architect & developer</strong></div><div><span>Proposed stack</span><strong>Python, FastAPI, PostgreSQL, Redis</strong></div><div><span>Status</span><strong>Planning & initial scaffolding</strong></div></div>
+          <p>I built a provider-neutral gateway that gives applications one OpenAI-compatible interface while selecting language-model providers according to cost, latency, availability, and task complexity.</p>
+          <div class="case-meta"><div><span>Role</span><strong>Architect & developer</strong></div><div><span>Stack</span><strong>Python, FastAPI, PostgreSQL, Redis</strong></div><div><span>Status</span><strong>Completed · October 2026</strong></div></div>
           <div class="case-notes">
             <article><h3>System goal</h3><p>Separate application code from individual model vendors while keeping routing policy, access control, and operational limits in one service.</p></article>
-            <article><h3>Routing design</h3><p>Requests will be evaluated against task complexity, provider health, latency, and cost, with automatic retries and fallback when the preferred route fails.</p></article>
-            <article><h3>Operational plan</h3><p>Per-client permissions, Redis-backed rate limits and caching, token budgets, structured traces, Prometheus metrics, and Grafana dashboards are part of the roadmap.</p></article>
+            <article><h3>Routing design</h3><p>Requests are evaluated against task complexity, provider health, latency, and cost, with automatic retries and fallback when the preferred route fails.</p></article>
+            <article><h3>Operational design</h3><p>The system design covers per-client permissions, Redis-backed rate limits and caching, token budgets, structured traces, Prometheus metrics, and Grafana dashboards.</p></article>
           </div>
-          <p class="case-caveat">This project is at the planning and initial scaffolding stage. The architecture and roadmap are defined; provider integrations, routing logic, and production hardening are still in development.</p>
+          <p class="case-caveat">The project is complete, with a provider-neutral interface, policy-driven routing, retry and fallback behavior, and an operational design for reliable deployment.</p>
         </article>
 
         <article class="case-study reveal" id="smartvision">
