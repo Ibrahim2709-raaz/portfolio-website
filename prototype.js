@@ -76,16 +76,26 @@ if (globe && flight && !reduceMotion) {
 
 const journey = document.querySelector('[data-scroll-journey]');
 const journeyPath = journey?.querySelector('[data-journey-progress]');
-const journeyCharacter = journey?.querySelector('[data-journey-character]');
+const journeyShadow = journey?.querySelector('.journey-path-shadow');
+const journeyAvatar = journey?.querySelector('[data-journey-avatar]');
 const journeyStops = [...(journey?.querySelectorAll('[data-journey-stop]') || [])];
 const dotsGroup = journey?.querySelector('[data-stop-dots]');
 
-if (journey && journeyPath && journeyCharacter && journeyStops.length) {
-  const pathLength = journeyPath.getTotalLength();
-  journeyPath.style.strokeDasharray = String(pathLength);
+if (journey && journeyPath && journeyAvatar && journeyStops.length) {
+  const desktopRoute = 'M600 65 C820 150 970 280 855 430 C735 590 245 540 325 765 C395 960 1000 845 875 1110 C770 1330 230 1195 340 1440 C405 1585 570 1640 600 1740';
+  const mobileRoute = 'M155 65 C95 210 190 330 145 495 C95 670 190 790 145 955 C95 1130 190 1240 145 1410 C105 1555 165 1650 145 1740';
+  let pathLength = 0;
   const dots = [];
 
-  if (dotsGroup) {
+  const setJourneyRoute = () => {
+    const route = window.innerWidth <= 720 ? mobileRoute : desktopRoute;
+    journeyPath.setAttribute('d', route);
+    if (journeyShadow) journeyShadow.setAttribute('d', route);
+    pathLength = journeyPath.getTotalLength();
+    journeyPath.style.strokeDasharray = String(pathLength);
+    dots.length = 0;
+    if (dotsGroup) dotsGroup.replaceChildren();
+
     journeyStops.forEach((_, index) => {
       const point = journeyPath.getPointAtLength(pathLength * (index / (journeyStops.length - 1)));
       const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
@@ -96,21 +106,30 @@ if (journey && journeyPath && journeyCharacter && journeyStops.length) {
       dotsGroup.appendChild(dot);
       dots.push(dot);
     });
-  }
+  };
+
+  setJourneyRoute();
 
   let ticking = false;
   const updateJourney = () => {
     const rect = journey.getBoundingClientRect();
-    const viewportAnchor = window.innerHeight * 0.55;
-    const progress = Math.max(0, Math.min(1, (viewportAnchor - rect.top) / Math.max(1, rect.height - window.innerHeight * 0.22)));
+    const viewportAnchor = window.innerHeight * 0.58;
+    const rawProgress = Math.max(0, Math.min(1, (viewportAnchor - rect.top) / Math.max(1, rect.height - window.innerHeight * 0.34)));
+    const segments = journeyStops.length - 1;
+    const scaledProgress = rawProgress * segments;
+    const segment = Math.min(segments - 1, Math.floor(scaledProgress));
+    const localProgress = rawProgress >= 1 ? 1 : scaledProgress - segment;
+    const easedProgress = localProgress * localProgress * (3 - 2 * localProgress);
+    const progress = rawProgress >= 1 ? 1 : (segment + easedProgress) / segments;
     const point = journeyPath.getPointAtLength(pathLength * progress);
-    journeyCharacter.setAttribute('transform', 'translate(' + point.x + ' ' + point.y + ')');
+    journeyAvatar.style.left = (point.x / 1200 * 100) + '%';
+    journeyAvatar.style.top = (point.y / 1800 * 100) + '%';
     journeyPath.style.strokeDashoffset = String(pathLength * (1 - progress));
 
-    const activeIndex = Math.min(journeyStops.length - 1, Math.floor(progress * journeyStops.length));
+    const activeIndex = Math.min(journeyStops.length - 1, Math.round(rawProgress * segments));
     journeyStops.forEach((stop, index) => stop.classList.toggle('is-active', index <= activeIndex));
     dots.forEach((dot, index) => dot.classList.toggle('is-active', index <= activeIndex));
-    journeyCharacter.dataset.stop = String(activeIndex);
+    journeyAvatar.dataset.stop = String(activeIndex);
     ticking = false;
   };
 
@@ -128,7 +147,10 @@ if (journey && journeyPath && journeyCharacter && journeyStops.length) {
   } else {
     updateJourney();
     window.addEventListener('scroll', requestJourneyUpdate, { passive: true });
-    window.addEventListener('resize', requestJourneyUpdate);
+    window.addEventListener('resize', () => {
+      setJourneyRoute();
+      requestJourneyUpdate();
+    });
   }
 }
 
