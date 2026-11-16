@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="prototype.css?v=20260926-3">
+  <link rel="stylesheet" href="prototype.css?v=20261116-nasa">
   <script src="prototype.js?v=20260925" defer></script>
   <script type="application/ld+json">
   {
@@ -71,7 +71,7 @@
         <h1>I build <em>resilient AI systems</em> and human-centred software.</h1>
         <p class="hero-lede">I’m Ibrahim, a Computer Science student and software developer turning research and real requirements into reliable products. My work brings together technical discipline, visual craft, and a poet’s attention to detail.</p>
         <div class="button-row"><a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="button button-secondary" href="documents/Ibrahim-Salman-Resume.pdf" target="_blank" rel="noreferrer">Download résumé <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="About/about.html">More about me</a></div>
-        <ul class="hero-facts" aria-label="Evidence from featured work"><li><strong>96.0%</strong><span>route delivery</span></li><li><strong>100</strong><span>paired trials</span></li><li><strong>8</strong><span>featured projects</span></li></ul>
+        <ul class="hero-facts" aria-label="Evidence from featured work"><li><strong>96.0%</strong><span>route delivery</span></li><li><strong>100</strong><span>paired trials</span></li><li><strong>9</strong><span>featured projects</span></li></ul>
       </div>
       <div class="code-window reveal" aria-label="Developer profile represented as code">
         <div class="window-bar"><span></span><span></span><span></span><p>ibrahim.profile.js</p></div>
@@ -99,6 +99,20 @@
       <div class="work-list">
         <article class="work-card reveal">
           <div class="work-number">01</div>
+          <div class="work-visual mars-visual" aria-hidden="true">
+            <div class="mars-orbit"></div><div class="mars-planet"><span></span></div>
+            <svg viewBox="0 0 420 280" role="presentation"><path class="mars-route mars-route-base" d="M48 218 C112 196 139 122 203 152 S294 109 364 58"/><path class="mars-route mars-route-emergency" d="M203 152 C250 210 314 188 364 58"/><circle cx="48" cy="218" r="7"/><circle cx="364" cy="58" r="8"/></svg>
+            <div class="mars-telemetry"><span>SAFE ROUTE</span><strong>85.74 m</strong><small>weighted A* · HiRISE terrain</small></div>
+          </div>
+          <div class="work-copy">
+            <p class="project-type">NASA Space Apps Challenge · Team lead</p><h3>Mars Walk Guardian</h3>
+            <p>I led our team in building a safety-first Mars rover mission planner that uses NASA-derived terrain data, weighted A* routing, and a live emergency mode to explain and recalculate safer traverses.</p>
+            <ul class="tag-list"><li>Python</li><li>FastAPI</li><li>React</li><li>MapLibre</li><li>Weighted A*</li></ul>
+            <div class="text-links"><a href="Projects/projects.html#mars-walk-guardian">Read the NASA challenge case study <span aria-hidden="true">→</span></a><a href="https://ibrahim2709-raaz.github.io/mars-walk-guardian/" target="_blank" rel="noreferrer">Launch live demo <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="work-card reveal">
+          <div class="work-number">02</div>
           <div class="work-visual gnn-visual" aria-hidden="true">
             <svg viewBox="0 0 420 280" role="presentation"><g class="network-lines"><path d="M54 208 128 150 202 196 276 116 363 58M128 150 179 65 276 116M202 196 318 224 363 58M179 65 363 58"/></g><g class="network-nodes"><circle cx="54" cy="208" r="11"/><circle cx="128" cy="150" r="14"/><circle cx="179" cy="65" r="10"/><circle cx="202" cy="196" r="12"/><circle cx="276" cy="116" r="15"/><circle cx="318" cy="224" r="10"/><circle class="sink" cx="363" cy="58" r="17"/></g></svg>
             <div class="gnn-stat"><strong>96.0%</strong><span>route delivery</span><small>extreme-severity simulation</small></div>
@@ -111,7 +125,7 @@
           </div>
         </article>
         <article class="work-card reveal">
-          <div class="work-number">02</div>
+          <div class="work-number">03</div>
           <div class="work-visual gateway-visual" aria-hidden="true">
             <div class="gateway-request"><span>POST</span><strong>/v1/chat</strong></div>
             <div class="gateway-router"><small>ROUTER</small><strong>↗</strong><span>cost · latency · health</span></div>
@@ -125,7 +139,7 @@
           </div>
         </article>
         <article class="work-card reveal">
-          <div class="work-number">03</div>
+          <div class="work-number">04</div>
           <div class="work-visual vision-visual" aria-hidden="true">
             <div class="vision-frame"><span class="vision-box vision-box-person">person <b>94%</b></span><span class="vision-box vision-box-cup">cup <b>87%</b></span><span class="vision-focus"></span></div>
             <div class="vision-caption"><span>● LIVE</span><strong>“Person and cup detected.”</strong></div>
@@ -138,7 +152,7 @@
           </div>
         </article>
         <article class="work-card reveal">
-          <div class="work-number">04</div>
+          <div class="work-number">05</div>
           <div class="work-visual touch-visual" aria-hidden="true">
             <div class="touch-targets"><span>24</span><span>32</span><span>40</span><span>48</span><span>56</span></div>
             <div class="touch-readout"><strong>5 sizes</strong><small>completion time + misclicks</small></div>
@@ -151,7 +165,7 @@
           </div>
         </article>
         <article class="work-card reveal">
-          <div class="work-number">05</div>
+          <div class="work-number">06</div>
           <div class="work-visual med-visual" aria-hidden="true">
             <div class="phone-card"><div class="med-head"><span>09:00</span><strong>MedReminder</strong></div><div class="med-row"><span>AM</span><div><b>Daily medication</b><small>1 tablet · with food</small></div><strong>✓</strong></div><div class="med-row"><span>RF</span><div><b>Refill reminder</b><small>5 doses remaining</small></div><strong>→</strong></div></div>
           </div>
@@ -163,7 +177,7 @@
           </div>
         </article>
         <article class="work-card reveal">
-          <div class="work-number">06</div>
+          <div class="work-number">07</div>
           <div class="work-visual kva-visual"><img src="images/kva.png" alt="Kamloops Pack wolf and volleyball logo" loading="lazy"></div>
           <div class="work-copy">
             <p class="project-type">Community website · Front end</p><h3>Kamloops Volleyball Association</h3>
@@ -173,7 +187,7 @@
           </div>
         </article>
         <article class="work-card reveal">
-          <div class="work-number">07</div>
+          <div class="work-number">08</div>
           <div class="work-visual system-visual" aria-hidden="true"><div class="system-card"><span>inventory</span><strong>INV</strong><small>stock model</small></div><div class="system-line"></div><div class="system-card system-card-alt"><span>workflow</span><strong>05</strong><small>core modules</small></div></div>
           <div class="work-copy">
             <p class="project-type">Full-stack system · Implementation</p><h3>Retail Resale Management System</h3>
@@ -183,7 +197,7 @@
           </div>
         </article>
         <article class="work-card reveal">
-          <div class="work-number">08</div>
+          <div class="work-number">09</div>
           <div class="work-visual portfolio-visual" aria-hidden="true"><span>&lt;idea&gt;</span><strong>design<br>meets<br>code.</strong><span>&lt;/idea&gt;</span></div>
           <div class="work-copy">
             <p class="project-type">Personal brand · Web development</p><h3>This portfolio</h3>
@@ -214,7 +228,7 @@
       <div class="section-shell now-grid">
         <div class="reveal"><p class="eyebrow">Now</p><h2>Learning in public. Building with purpose.</h2></div>
         <div class="now-card reveal"><span>Completed</span><h3>LLM infrastructure</h3><p>Finished a provider-neutral gateway centered on routing, reliability, cost controls, and observable operations.</p></div>
-        <div class="now-card reveal"><span>Researching</span><h3>GNNs & reinforcement learning</h3><p>Studying how topology-aware models can keep critical networks routing around failures.</p></div>
+        <div class="now-card reveal"><span>Completed · Team lead</span><h3>NASA Space Apps Challenge</h3><p>Led the team behind Mars Walk Guardian, combining NASA-derived Mars terrain, weighted A* routing, and an emergency rover workflow.</p></div>
       </div>
     </section>
 

@@ -89,6 +89,20 @@ h3 { font-size: clamp(1.35rem, 2vw, 2rem); }
 .work-card:hover { transform: translateY(-4px); border-color: rgba(85,214,194,.5); }
 .work-number { align-self: start; color: var(--coral); font: .8rem "DM Mono", monospace; }
 .work-visual { min-height: 300px; border-radius: 16px; overflow: hidden; background: #d7e5e1; }
+.mars-visual { position: relative; display: grid; align-items: end; padding: 22px; background: radial-gradient(circle at 72% 28%, rgba(230,105,65,.28), transparent 28%), radial-gradient(circle at 18% 82%, rgba(85,214,194,.13), transparent 34%), #080d16; }
+.mars-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.mars-visual svg circle { fill: var(--night); stroke: var(--cyan); stroke-width: 3; }
+.mars-route { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.mars-route-base { stroke: var(--cyan); stroke-width: 4; stroke-dasharray: 7 8; }
+.mars-route-emergency { stroke: var(--coral); stroke-width: 5; }
+.mars-orbit { position: absolute; top: -44px; right: -54px; width: 230px; height: 230px; border: 1px solid rgba(243,240,232,.14); border-radius: 50%; transform: rotate(-18deg); }
+.mars-planet { position: absolute; top: 26px; right: 28px; width: 78px; height: 78px; overflow: hidden; border-radius: 50%; background: radial-gradient(circle at 36% 32%, #f5a16f 0 8%, transparent 9%), radial-gradient(circle at 64% 66%, #9f3829 0 11%, transparent 12%), linear-gradient(145deg,#e87043,#7e2927); box-shadow: 0 0 36px rgba(232,112,67,.24); }
+.mars-planet span { position: absolute; left: 11px; bottom: 16px; width: 56px; height: 12px; border-radius: 50%; border-top: 3px solid rgba(78,24,25,.5); transform: rotate(9deg); }
+.mars-telemetry { position: relative; z-index: 1; width: max-content; padding: 12px 15px; border: 1px solid rgba(243,240,232,.2); border-radius: 12px; background: rgba(8,13,22,.88); }
+.mars-telemetry span, .mars-telemetry strong, .mars-telemetry small { display: block; }
+.mars-telemetry span { color: var(--cyan); font: .62rem "DM Mono", monospace; letter-spacing: .12em; }
+.mars-telemetry strong { margin-top: 5px; color: var(--ink); font-size: 1.55rem; }
+.mars-telemetry small { color: var(--muted); font: .57rem "DM Mono", monospace; }
 .gnn-visual { position: relative; display: grid; align-items: end; padding: 22px; background: radial-gradient(circle at 76% 20%, rgba(85,214,194,.25), transparent 34%), #0c1520; }
 .gnn-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .network-lines path { fill: none; stroke: rgba(85,214,194,.45); stroke-width: 2; }
