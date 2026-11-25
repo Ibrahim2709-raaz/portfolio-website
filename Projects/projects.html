@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../prototype.css?v=20261116-nasa">
+  <link rel="stylesheet" href="../prototype.css?v=20261124-scenar">
   <script src="../prototype.js?v=20260925" defer></script>
 </head>
 <body>
@@ -42,24 +42,39 @@
     <div class="section-shell detail-grid">
       <aside class="detail-aside reveal">
         <p class="eyebrow">Project index</p>
-        <h2>Nine ways of thinking.</h2>
-        <p>Mission planning, machine-learning research, LLM infrastructure, computer vision, mobile experimentation, team development, interface design, systems analysis, and a personal product.</p>
+        <h2>Ten ways of thinking.</h2>
+        <p>Safety-focused AI, mission planning, machine-learning research, LLM infrastructure, computer vision, mobile experimentation, team development, interface design, systems analysis, and a personal product.</p>
         <ul>
-          <li><strong>01</strong><span>Mars Walk Guardian</span></li>
-          <li><strong>02</strong><span>GNN–RL routing</span></li>
-          <li><strong>03</strong><span>LLM gateway</span></li>
-          <li><strong>04</strong><span>SmartVision</span></li>
-          <li><strong>05</strong><span>MD3 methodology</span></li>
-          <li><strong>06</strong><span>MedReminder</span></li>
-          <li><strong>07</strong><span>KVA website</span></li>
-          <li><strong>08</strong><span>Retail system</span></li>
-          <li><strong>09</strong><span>Portfolio</span></li>
+          <li><strong>01</strong><span>SCENAR</span></li>
+          <li><strong>02</strong><span>Mars Walk Guardian</span></li>
+          <li><strong>03</strong><span>GNN–RL routing</span></li>
+          <li><strong>04</strong><span>LLM gateway</span></li>
+          <li><strong>05</strong><span>SmartVision</span></li>
+          <li><strong>06</strong><span>MD3 methodology</span></li>
+          <li><strong>07</strong><span>MedReminder</span></li>
+          <li><strong>08</strong><span>KVA website</span></li>
+          <li><strong>09</strong><span>Retail system</span></li>
+          <li><strong>10</strong><span>Portfolio</span></li>
         </ul>
       </aside>
 
       <div>
+        <article class="case-study reveal" id="scenar">
+          <p class="project-type">01 · AppFusion Hackathon · Winner — Best Use of AI</p>
+          <h2>SCENAR</h2>
+          <p>I served as technical lead for a team-built Android emergency-reporting system that turns incomplete voice or text descriptions into structured incident reports. The person reporting the emergency reviews and corrects every field before a simulated handoff to responders.</p>
+          <div class="case-meta"><div><span>Role</span><strong>Technical lead, AI & integration</strong></div><div><span>Stack</span><strong>Java, Android, OpenAI, JavaScript, BLE</strong></div><div><span>Recognition</span><strong>Best Use of AI · November 2026</strong></div></div>
+          <div class="case-notes">
+            <article><h3>AI with boundaries</h3><p>I built and integrated the incident-structuring pipeline, JSON parsing, validation, secure backend boundary, and deterministic offline fallback. Unknown information stays unknown, and the interface exposes loading, retry, failure, and fallback states.</p></article>
+            <article><h3>Product leadership</h3><p>I defined the architecture, shared incident contracts, milestone plan, and integration workflow, then coordinated pull-request reviews, regression testing, release preparation, and a product-wide UI redesign.</p></article>
+            <article><h3>Resilient handoff</h3><p>The prototype connects a guided victim flow to a consent-aware responder dashboard, encrypted emergency-profile storage, location and facility routing, plus an experimental privacy-safe Bluetooth rescue beacon.</p></article>
+          </div>
+          <p class="case-caveat">SCENAR does not diagnose injuries or provide treatment advice. Authority dispatch and contact notifications are simulated, and Bluetooth rescue mode remains experimental until validated on physical devices.</p>
+          <div class="text-links"><a href="https://github.com/Ibrahim2709-raaz/scenar" target="_blank" rel="noreferrer">View team repository ↗</a></div>
+        </article>
+
         <article class="case-study reveal" id="mars-walk-guardian">
-          <p class="project-type">01 · NASA Space Apps Challenge · Team project</p>
+          <p class="project-type">02 · NASA Space Apps Challenge · Team project</p>
           <h2>Mars Walk Guardian</h2>
           <p>I led our team in creating a safety-first rover mission planner for the Mount Sharp region of Gale Crater. The system plans a traverse to a science-target candidate, explains route risk, and recalculates a safer return when simulated terrain or rover conditions deteriorate.</p>
           <div class="case-meta"><div><span>Role</span><strong>Team lead, routing developer & presenter</strong></div><div><span>Stack</span><strong>React, MapLibre, Python, FastAPI</strong></div><div><span>Status</span><strong>Completed · November 2026</strong></div></div>
@@ -74,7 +89,7 @@
         </article>
 
         <article class="case-study reveal" id="gnn-routing">
-          <p class="project-type">02 · Machine-learning research</p>
+          <p class="project-type">03 · Machine-learning research</p>
           <h2>GNN–RL Self-Healing Disaster Routing</h2>
           <p>I authored the research with Jaspreet Kaur and co-produced the code for a self-healing routing framework designed to keep healthcare wireless sensor networks connected through disaster-induced node failures.</p>
           <div class="case-meta"><div><span>Role</span><strong>Research author & code co-producer</strong></div><div><span>Stack</span><strong>Python, PyTorch, NetworkX</strong></div><div><span>Status</span><strong>Manuscript submitted</strong></div></div>
@@ -89,7 +104,7 @@
         </article>
 
         <article class="case-study reveal" id="llm-gateway">
-          <p class="project-type">03 · LLM infrastructure · Completed</p>
+          <p class="project-type">04 · LLM infrastructure · Completed</p>
           <h2>Multi-Provider LLM Gateway</h2>
           <p>I built a provider-neutral gateway that gives applications one OpenAI-compatible interface while selecting language-model providers according to cost, latency, availability, and task complexity.</p>
           <div class="case-meta"><div><span>Role</span><strong>Architect & developer</strong></div><div><span>Stack</span><strong>Python, FastAPI, PostgreSQL, Redis</strong></div><div><span>Status</span><strong>Completed · October 2026</strong></div></div>
@@ -102,7 +117,7 @@
         </article>
 
         <article class="case-study reveal" id="smartvision">
-          <p class="project-type">04 · Computer vision · In development</p>
+          <p class="project-type">05 · Computer vision · In development</p>
           <h2>SmartVision Visual Assistant</h2>
           <p>I’m developing a real-time visual assistant that brings together OpenCV camera input, Hugging Face object detection, and offline speech to turn visual detections into spoken context.</p>
           <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Planned stack</span><strong>Python, OpenCV, Hugging Face</strong></div><div><span>Status</span><strong>Concept & initial repository</strong></div></div>
@@ -116,7 +131,7 @@
         </article>
 
         <article class="case-study reveal" id="md3">
-          <p class="project-type">05 · Android usability experiment</p>
+          <p class="project-type">06 · Android usability experiment</p>
           <h2>MD3 Touch Target Methodology</h2>
           <p>The repository credits me as the project’s original developer. I built the foundation for an Android experiment that studies how interface target size affects task speed and misclick frequency.</p>
           <div class="case-meta"><div><span>Role</span><strong>Original developer & contributor</strong></div><div><span>Stack</span><strong>Java, Android SDK, Material Components</strong></div><div><span>Version</span><strong>v0.3.0</strong></div></div>
@@ -146,7 +161,7 @@
         </article>
 
         <article class="case-study reveal" id="med-reminder">
-          <p class="project-type">06 · Collaborative Android development</p>
+          <p class="project-type">07 · Collaborative Android development</p>
           <h2>MedReminder</h2>
           <p>A completed three-person Android term project for medication schedules, dose logging, refill tracking, alarms, and adherence history. My commits span product features, API integration, interface work, and team integration.</p>
           <div class="case-meta"><div><span>Role</span><strong>Android developer & collaborator</strong></div><div><span>Stack</span><strong>Java, Android SDK, Gradle, APIs</strong></div><div><span>Status</span><strong>Completed · April 2026</strong></div></div>
@@ -160,7 +175,7 @@
         </article>
 
         <article class="case-study reveal" id="kva">
-          <p class="project-type">07 · Front-end development</p>
+          <p class="project-type">08 · Front-end development</p>
           <h2>Kamloops Volleyball Association</h2>
           <p>A multi-page website concept for players and families who need a clear path to programs, club information, gallery content, and contact details.</p>
           <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>HTML, CSS, JavaScript</strong></div><div><span>Status</span><strong>Live on GitHub Pages</strong></div></div>
@@ -173,7 +188,7 @@
         </article>
 
         <article class="case-study reveal" id="retail">
-          <p class="project-type">08 · Full-stack system · Implementation</p>
+          <p class="project-type">09 · Full-stack system · Implementation</p>
           <h2>Retail Resale Management System</h2>
           <p>A requirements-driven platform for inventory, sales, customers, credit, and payments. Requirements, system modeling, and technical design are complete; implementation is now underway.</p>
           <div class="case-meta"><div><span>Role</span><strong>Systems analyst & developer</strong></div><div><span>Planned stack</span><strong>React, TypeScript, FastAPI, PostgreSQL</strong></div><div><span>Status</span><strong>Implementation · Stage 4.1</strong></div></div>
@@ -186,7 +201,7 @@
         </article>
 
         <article class="case-study reveal" id="portfolio">
-          <p class="project-type">09 · Personal product</p>
+          <p class="project-type">10 · Personal product</p>
           <h2>Portfolio website</h2>
           <p>A lightweight, accessible site that replaces a generic project gallery with a clear story about what I build, how I think, and what I’m learning.</p>
           <div class="case-meta"><div><span>Role</span><strong>Designer & developer</strong></div><div><span>Stack</span><strong>Semantic HTML, CSS, JS</strong></div><div><span>Delivery</span><strong>GitHub Pages</strong></div></div>
