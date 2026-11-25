@@ -89,6 +89,23 @@ h3 { font-size: clamp(1.35rem, 2vw, 2rem); }
 .work-card:hover { transform: translateY(-4px); border-color: rgba(85,214,194,.5); }
 .work-number { align-self: start; color: var(--coral); font: .8rem "DM Mono", monospace; }
 .work-visual { min-height: 300px; border-radius: 16px; overflow: hidden; background: #d7e5e1; }
+.scenar-visual { position: relative; display: grid; place-items: center; padding: 22px; background: radial-gradient(circle at 18% 18%, rgba(85,214,194,.25), transparent 34%), linear-gradient(145deg, #07151a, #112631); }
+.scenar-signal { position: absolute; top: 22px; left: 22px; display: flex; gap: 5px; align-items: end; height: 34px; }
+.scenar-signal span { width: 5px; border-radius: 8px; background: var(--cyan); animation: scenar-pulse 1.8s ease-in-out infinite; }
+.scenar-signal span:nth-child(1) { height: 14px; }
+.scenar-signal span:nth-child(2) { height: 30px; animation-delay: -.6s; }
+.scenar-signal span:nth-child(3) { height: 21px; animation-delay: -1.2s; }
+.scenar-report { width: min(100%, 250px); padding: 20px; border: 1px solid rgba(85,214,194,.35); border-radius: 15px; background: rgba(8,18,25,.88); box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+.scenar-report > small { color: var(--cyan); font: .58rem "DM Mono", monospace; letter-spacing: .12em; }
+.scenar-report > strong { display: block; margin: 8px 0 14px; color: var(--ink); font-size: 1.15rem; }
+.scenar-report div { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-top: 1px solid rgba(243,240,232,.1); color: var(--muted); font: .62rem "DM Mono", monospace; }
+.scenar-report b { color: var(--ink); font-weight: 500; }
+.scenar-award { position: absolute; right: 16px; bottom: 16px; padding: 11px 13px; border-radius: 11px; background: var(--coral); color: var(--night); transform: rotate(-2deg); box-shadow: 0 10px 28px rgba(0,0,0,.25); }
+.scenar-award span, .scenar-award strong, .scenar-award small { display: block; }
+.scenar-award span { font: 700 .55rem "DM Mono", monospace; letter-spacing: .12em; }
+.scenar-award strong { margin: 3px 0; font-size: .9rem; }
+.scenar-award small { font-size: .56rem; }
+@keyframes scenar-pulse { 50% { opacity: .35; transform: scaleY(.7); } }
 .mars-visual { position: relative; display: grid; align-items: end; padding: 22px; background: radial-gradient(circle at 72% 28%, rgba(230,105,65,.28), transparent 28%), radial-gradient(circle at 18% 82%, rgba(85,214,194,.13), transparent 34%), #080d16; }
 .mars-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .mars-visual svg circle { fill: var(--night); stroke: var(--cyan); stroke-width: 3; }
@@ -189,7 +206,7 @@ h3 { font-size: clamp(1.35rem, 2vw, 2rem); }
 .story-points p { margin: 0; color: var(--muted); font-size: .9rem; }
 
 .now-section { padding-block: 96px; background: var(--ink); color: var(--night); }
-.now-grid { display: grid; grid-template-columns: 1.1fr .7fr .7fr; gap: 24px; align-items: stretch; }
+.now-grid { display: grid; grid-template-columns: 1.1fr repeat(3, .7fr); gap: 24px; align-items: stretch; }
 .now-grid .eyebrow { color: var(--cyan-deep); }
 .now-grid h2 { margin-bottom: 0; }
 .now-card { padding: 26px; border: 1px solid rgba(11,16,24,.2); border-radius: 18px; background: rgba(255,255,255,.35); }
@@ -310,6 +327,7 @@ h3 { font-size: clamp(1.35rem, 2vw, 2rem); }
   .work-card { position: relative; grid-template-columns: 1fr; padding: 20px; }
   .work-number { position: absolute; margin: 13px; padding: 5px 8px; border-radius: 999px; background: var(--night); z-index: 2; }
   .work-visual { min-height: 250px; }
+  .scenar-award { right: 12px; bottom: 12px; }
   .system-visual { min-height: 230px; }
   .portrait-frame { margin-inline: auto; }
   .portrait-note { right: 8px; }
@@ -325,6 +343,10 @@ h3 { font-size: clamp(1.35rem, 2vw, 2rem); }
   .form-row { grid-template-columns: 1fr; }
   .error-page { grid-template-columns: 1fr; align-content: center; }
   .error-code { grid-row: 1; text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scenar-signal span { animation: none; }
 }
 
 @media (max-width: 460px) {
